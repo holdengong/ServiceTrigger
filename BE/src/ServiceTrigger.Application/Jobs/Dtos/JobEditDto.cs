@@ -18,5 +18,15 @@ namespace ServiceTrigger.Jobs.Dtos
 
         [Required]
         public bool IsEnable { get; set; }
+
+        /// <summary>
+        /// 项目ID
+        /// </summary>
+        [Required]
+        public int ProjectId { get; set; }
+
+        [Required]
+        [MaxLength(ServiceTriggerConsts.MaxUrlLength)]
+        public string ApiUrl { get; set; }
     }
 }

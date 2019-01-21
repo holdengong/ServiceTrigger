@@ -10,6 +10,7 @@
   <ItemGroup>
     <Compile Remove="Migrations\20190121060222_201901211402_Added_Job.cs" />
     <Compile Remove="Migrations\20190121062044_201901211420_Added_Job.cs" />
+    <Compile Remove="Migrations\20190121092355_201901211722_Add_Project.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.1" />

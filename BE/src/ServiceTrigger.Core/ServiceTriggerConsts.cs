@@ -18,7 +18,14 @@
         /// </summary>
         public const int MaxNameLength = 50;
 
-
+        /// <summary>
+        /// 地址最大长度
+        /// </summary>
         public const int MaxAddressLength = 200;
+
+        /// <summary>
+        /// URL最大长度
+        /// </summary>
+        public const int MaxUrlLength = 2000;
     }
 }

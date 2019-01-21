@@ -5,7 +5,7 @@ namespace ServiceTrigger.Jobs.Dtos.LTMAutoMapper
     /// <summary>
     /// 配置Job的AutoMapper
     /// </summary>
-    internal static class CustomJobMapper
+    internal static class JobMapper
     {
         public static void CreateMappings(IMapperConfigurationExpression configuration)
         {

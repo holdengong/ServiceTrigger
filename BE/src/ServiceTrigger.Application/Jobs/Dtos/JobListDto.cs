@@ -12,5 +12,7 @@ namespace ServiceTrigger.Jobs.Dtos
         public string JobName { get; set; }
         public FrequencyEnum Frequency { get; set; }
         public bool IsEnable { get; set; }
+        public int ProjectId { get; set; }
+        public string ApiUrl { get; set; }
     }
 }

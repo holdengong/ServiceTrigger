@@ -16,6 +16,8 @@ using ServiceTrigger.Configuration;
 using ServiceTrigger.Identity;
 
 using Abp.AspNetCore.SignalR.Hubs;
+using Hangfire;
+using Hangfire.MySql.Core;
 
 namespace ServiceTrigger.Web.Host.Startup
 {
@@ -76,6 +78,9 @@ namespace ServiceTrigger.Web.Host.Startup
                 });
             });
 
+            var connStr = _appConfiguration["ConnectionStrings:Default"];
+            services.AddHangfire(config => config.UseStorage(new MySqlStorage(connStr)));
+
             // Configure Abp and Dependency Injection
             return services.AddAbp<ServiceTriggerWebHostModule>(
                 // Configure Log4Net logging
@@ -123,6 +128,10 @@ namespace ServiceTrigger.Web.Host.Startup
                 options.IndexStream = () => Assembly.GetExecutingAssembly()
                     .GetManifestResourceStream("ServiceTrigger.Web.Host.wwwroot.swagger.ui.index.html");
             }); // URL: /swagger
+
+            //Hangfire
+            app.UseHangfireServer();
+            app.UseHangfireDashboard();
         }
     }
 }

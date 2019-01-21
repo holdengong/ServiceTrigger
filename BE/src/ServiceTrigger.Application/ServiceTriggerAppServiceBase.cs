@@ -1,4 +1,11 @@
-﻿using Abp.Application.Services;
+﻿using System;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Abp.Application.Services;
+using Abp.IdentityFramework;
+using Abp.Runtime.Session;
+using ServiceTrigger.Authorization.Users;
+using ServiceTrigger.MultiTenancy;
 
 namespace ServiceTrigger
 {
@@ -7,9 +14,34 @@ namespace ServiceTrigger
     /// </summary>
     public abstract class ServiceTriggerAppServiceBase : ApplicationService
     {
+        public TenantManager TenantManager { get; set; }
+
+        public UserManager UserManager { get; set; }
+
         protected ServiceTriggerAppServiceBase()
         {
             LocalizationSourceName = ServiceTriggerConsts.LocalizationSourceName;
+        }
+
+        protected virtual Task<User> GetCurrentUserAsync()
+        {
+            var user = UserManager.FindByIdAsync(AbpSession.GetUserId().ToString());
+            if (user == null)
+            {
+                throw new Exception("There is no current user!");
+            }
+
+            return user;
+        }
+
+        protected virtual Task<Tenant> GetCurrentTenantAsync()
+        {
+            return TenantManager.GetByIdAsync(AbpSession.GetTenantId());
+        }
+
+        protected virtual void CheckErrors(IdentityResult identityResult)
+        {
+            identityResult.CheckErrors(LocalizationManager);
         }
     }
 }

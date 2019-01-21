@@ -1,0 +1,553 @@
+DEBUG 2019-01-21 14:31:48,166 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-01-21 14:31:48,332 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2019-01-21 14:31:48,360 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.Web.Host.Startup.ServiceTriggerWebHostModule, ServiceTrigger.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:48,364 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerWebCoreModule, ServiceTrigger.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:48,365 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerApplicationModule, ServiceTrigger.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:48,366 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerCoreModule, ServiceTrigger.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:48,366 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:48,367 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:48,367 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:48,368 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:48,368 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.EntityFrameworkCore.ServiceTriggerEntityFrameworkModule, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:48,369 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:48,369 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:48,369 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:48,370 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:48,370 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:48,371 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:48,375 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2019-01-21 14:31:48,504 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 14:31:48,504 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 14:31:48,504 [1    ] o.Configuration.LanguageManagementConfig - Converted ServiceTrigger (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 14:31:48,504 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 14:31:49,049 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ServiceTrigger.EntityFrameworkCore.ServiceTriggerDbContext, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:31:50,442 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-01-21 14:31:50,525 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-01-21 14:31:50,600 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-01-21 14:31:50,649 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ServiceTrigger
+DEBUG 2019-01-21 14:31:50,699 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-01-21 14:31:50,914 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-01-21 14:31:50,989 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 11 classes define auto mapping attributes
+DEBUG 2019-01-21 14:31:50,990 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-01-21 14:31:51,001 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.CreateUserDto
+DEBUG 2019-01-21 14:31:51,002 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.UserDto
+DEBUG 2019-01-21 14:31:51,002 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-01-21 14:31:51,002 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-01-21 14:31:51,003 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.CreateRoleDto
+DEBUG 2019-01-21 14:31:51,003 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.PermissionDto
+DEBUG 2019-01-21 14:31:51,003 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.RoleDto
+DEBUG 2019-01-21 14:31:51,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-01-21 14:31:51,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.TenantDto
+DEBUG 2019-01-21 14:31:51,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Jobs.Dtos.JobListDto
+INFO  2019-01-21 14:32:00,777 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-01-21 14:32:00,777 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2019-01-21 14:32:01,223 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 520.9747ms 200 
+INFO  2019-01-21 14:32:14,732 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host)
+INFO  2019-01-21 14:32:16,168 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host) - Validation state: Valid
+INFO  2019-01-21 14:32:16,179 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 5.0805ms.
+INFO  2019-01-21 14:32:16,347 [6    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-01-21 14:32:16,369 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host) in 1628.7147ms
+INFO  2019-01-21 14:32:16,386 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-01-21 14:32:16,394 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15701.4421ms 302 
+INFO  2019-01-21 14:32:16,450 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 64.0183ms 200 text/html
+INFO  2019-01-21 14:32:16,508 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2019-01-21 14:32:16,512 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2019-01-21 14:32:16,516 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2019-01-21 14:32:16,553 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2019-01-21 14:32:16,555 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2019-01-21 14:32:16,557 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2019-01-21 14:32:16,571 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 52.5372ms 304 application/javascript
+INFO  2019-01-21 14:32:16,575 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 59.5027ms 304 text/css
+INFO  2019-01-21 14:32:16,577 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 59.4877ms 304 application/javascript
+INFO  2019-01-21 14:32:17,075 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-01-21 14:32:17,517 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 441.6264ms 200 application/json;charset=utf-8
+INFO  2019-01-21 14:33:06,194 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10  
+INFO  2019-01-21 14:33:06,281 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 14:33:06,643 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+ERROR 2019-01-21 14:33:07,390 [6    ] Mvc.ExceptionHandling.AbpExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync(GetJobInput input) in C:\GitRepository\ServiceTrigger (1)\4.4.0\aspnet-core\src\ServiceTrigger.Application\Jobs\JobAppService.cs:line 36
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-01-21 14:33:07,946 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 14:33:07,998 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 1714.4284ms
+INFO  2019-01-21 14:33:08,022 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1824.8381ms 500 application/json; charset=utf-8
+INFO  2019-01-21 14:33:22,798 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?FilterText=1&SkipCount=0&MaxResultCount=10&Sorting=1  
+INFO  2019-01-21 14:33:22,848 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 14:33:23,015 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+ERROR 2019-01-21 14:33:23,562 [16   ] Mvc.ExceptionHandling.AbpExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync(GetJobInput input) in C:\GitRepository\ServiceTrigger (1)\4.4.0\aspnet-core\src\ServiceTrigger.Application\Jobs\JobAppService.cs:line 36
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-01-21 14:33:23,566 [16   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 14:33:23,569 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 718.2548ms
+INFO  2019-01-21 14:33:23,572 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 784.0681ms 500 application/json; charset=utf-8
+INFO  2019-01-21 14:33:47,014 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Job/GetPagedJobAsync?FilterText=&SkipCount=1&MaxResultCount=10&Sorting=  0
+INFO  2019-01-21 14:33:47,028 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15.4321ms 404 
+INFO  2019-01-21 14:34:57,539 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Job/GetPagedJobAsync?FilterText=&SkipCount=1&MaxResultCount=10&Sorting=  0
+INFO  2019-01-21 14:34:57,543 [30   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.8054ms 404 
+INFO  2019-01-21 14:35:14,798 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10  
+INFO  2019-01-21 14:35:14,805 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 14:35:14,838 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+ERROR 2019-01-21 14:35:15,427 [19   ] Mvc.ExceptionHandling.AbpExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync(GetJobInput input) in C:\GitRepository\ServiceTrigger (1)\4.4.0\aspnet-core\src\ServiceTrigger.Application\Jobs\JobAppService.cs:line 36
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-01-21 14:35:15,431 [19   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 14:35:15,433 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 626.3587ms
+INFO  2019-01-21 14:35:15,436 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 662.7134ms 500 application/json; charset=utf-8
+INFO  2019-01-21 14:35:27,049 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10  0
+INFO  2019-01-21 14:35:27,054 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.5099ms 404 
+INFO  2019-01-21 14:35:52,924 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10 text/plain 0
+INFO  2019-01-21 14:35:52,939 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.133ms 404 
+INFO  2019-01-21 14:36:06,007 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10 text/plain 0
+INFO  2019-01-21 14:36:06,013 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.3557ms 404 
+INFO  2019-01-21 14:36:23,499 [31   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10  
+INFO  2019-01-21 14:36:23,505 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 14:36:23,540 [31   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+ERROR 2019-01-21 14:36:37,140 [32   ] Mvc.ExceptionHandling.AbpExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync(GetJobInput input) in C:\GitRepository\ServiceTrigger (1)\4.4.0\aspnet-core\src\ServiceTrigger.Application\Jobs\JobAppService.cs:line 36
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-01-21 14:36:37,144 [32   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 14:36:37,146 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 13638.7012ms
+INFO  2019-01-21 14:36:37,148 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13649.431ms 500 application/json; charset=utf-8
+INFO  2019-01-21 14:36:40,434 [35   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10  
+INFO  2019-01-21 14:36:40,440 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 14:36:40,476 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+ERROR 2019-01-21 14:36:48,459 [34   ] Mvc.ExceptionHandling.AbpExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync(GetJobInput input) in C:\GitRepository\ServiceTrigger (1)\4.4.0\aspnet-core\src\ServiceTrigger.Application\Jobs\JobAppService.cs:line 36
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-01-21 14:36:48,462 [34   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 14:36:48,465 [34   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 8022.3956ms
+INFO  2019-01-21 14:36:48,468 [34   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8034.9094ms 500 application/json; charset=utf-8
+INFO  2019-01-21 14:36:51,057 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10  
+INFO  2019-01-21 14:36:51,064 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 14:36:51,104 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+ERROR 2019-01-21 14:37:09,232 [32   ] Mvc.ExceptionHandling.AbpExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync(GetJobInput input) in C:\GitRepository\ServiceTrigger (1)\4.4.0\aspnet-core\src\ServiceTrigger.Application\Jobs\JobAppService.cs:line 36
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-01-21 14:37:09,236 [32   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 14:37:09,238 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 18171.7689ms
+INFO  2019-01-21 14:37:09,241 [32   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 18184.1275ms 500 application/json; charset=utf-8
+INFO  2019-01-21 14:37:48,216 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10  
+INFO  2019-01-21 14:37:48,225 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 14:37:48,264 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+ERROR 2019-01-21 14:38:33,050 [42   ] Mvc.ExceptionHandling.AbpExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync(GetJobInput input) in C:\GitRepository\ServiceTrigger (1)\4.4.0\aspnet-core\src\ServiceTrigger.Application\Jobs\JobAppService.cs:line 36
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-01-21 14:38:33,053 [42   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 14:38:33,057 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 44829.4863ms
+INFO  2019-01-21 14:38:33,060 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 44845.7961ms 500 application/json; charset=utf-8
+INFO  2019-01-21 14:38:55,179 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10  
+INFO  2019-01-21 14:38:55,186 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 14:38:55,222 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+ERROR 2019-01-21 14:38:57,525 [47   ] Mvc.ExceptionHandling.AbpExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync(GetJobInput input) in C:\GitRepository\ServiceTrigger (1)\4.4.0\aspnet-core\src\ServiceTrigger.Application\Jobs\JobAppService.cs:line 36
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-01-21 14:38:57,531 [47   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 14:38:57,533 [47   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 2345.2124ms
+INFO  2019-01-21 14:38:57,536 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2357.4743ms 500 application/json; charset=utf-8
+INFO  2019-01-21 14:39:07,444 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?FilterText=%20&SkipCount=0&MaxResultCount=10&Sorting=%20  
+INFO  2019-01-21 14:39:07,457 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 14:39:07,497 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+ERROR 2019-01-21 14:39:17,568 [42   ] Mvc.ExceptionHandling.AbpExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync(GetJobInput input) in C:\GitRepository\ServiceTrigger (1)\4.4.0\aspnet-core\src\ServiceTrigger.Application\Jobs\JobAppService.cs:line 36
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-01-21 14:39:17,572 [42   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 14:39:17,575 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 10114.7042ms
+INFO  2019-01-21 14:39:17,579 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10134.9496ms 500 application/json; charset=utf-8
+INFO  2019-01-21 14:39:20,623 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?FilterText=%20&SkipCount=0&MaxResultCount=10&Sorting=%20  
+INFO  2019-01-21 14:39:20,630 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 14:39:20,663 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+ERROR 2019-01-21 14:39:31,646 [42   ] Mvc.ExceptionHandling.AbpExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync(GetJobInput input) in C:\GitRepository\ServiceTrigger (1)\4.4.0\aspnet-core\src\ServiceTrigger.Application\Jobs\JobAppService.cs:line 36
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-01-21 14:39:31,649 [42   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 14:39:31,652 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 11019.5948ms
+INFO  2019-01-21 14:39:31,655 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11030.9634ms 500 application/json; charset=utf-8
+DEBUG 2019-01-21 14:40:43,349 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-01-21 14:40:43,604 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2019-01-21 14:40:43,644 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.Web.Host.Startup.ServiceTriggerWebHostModule, ServiceTrigger.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:43,651 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerWebCoreModule, ServiceTrigger.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:43,652 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerApplicationModule, ServiceTrigger.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:43,652 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerCoreModule, ServiceTrigger.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:43,653 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:43,653 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:43,654 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:43,655 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:43,656 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.EntityFrameworkCore.ServiceTriggerEntityFrameworkModule, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:43,656 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:43,656 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:43,657 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:43,657 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:43,658 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:43,658 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:43,664 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2019-01-21 14:40:43,823 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 14:40:43,823 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 14:40:43,823 [1    ] o.Configuration.LanguageManagementConfig - Converted ServiceTrigger (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 14:40:43,823 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 14:40:44,453 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ServiceTrigger.EntityFrameworkCore.ServiceTriggerDbContext, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:40:46,051 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-01-21 14:40:46,150 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-01-21 14:40:46,252 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-01-21 14:40:46,294 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ServiceTrigger
+DEBUG 2019-01-21 14:40:46,355 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-01-21 14:40:46,610 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-01-21 14:40:46,699 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 11 classes define auto mapping attributes
+DEBUG 2019-01-21 14:40:46,699 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-01-21 14:40:46,712 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.CreateUserDto
+DEBUG 2019-01-21 14:40:46,713 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.UserDto
+DEBUG 2019-01-21 14:40:46,713 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-01-21 14:40:46,714 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-01-21 14:40:46,714 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.CreateRoleDto
+DEBUG 2019-01-21 14:40:46,714 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.PermissionDto
+DEBUG 2019-01-21 14:40:46,714 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.RoleDto
+DEBUG 2019-01-21 14:40:46,716 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-01-21 14:40:46,716 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.TenantDto
+DEBUG 2019-01-21 14:40:46,716 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Jobs.Dtos.JobListDto
+INFO  2019-01-21 14:40:55,022 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2019-01-21 14:40:55,022 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-01-21 14:40:55,200 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 189.4279ms 200 
+INFO  2019-01-21 14:41:08,786 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host)
+INFO  2019-01-21 14:41:10,190 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host) - Validation state: Valid
+INFO  2019-01-21 14:41:10,200 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 3.4888ms.
+INFO  2019-01-21 14:41:10,566 [9    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-01-21 14:41:10,588 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host) in 1793.9686ms
+INFO  2019-01-21 14:41:10,604 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-01-21 14:41:10,612 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15607.5246ms 302 
+INFO  2019-01-21 14:41:10,674 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 69.5469ms 200 text/html
+INFO  2019-01-21 14:41:10,741 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2019-01-21 14:41:10,745 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2019-01-21 14:41:10,752 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2019-01-21 14:41:10,801 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2019-01-21 14:41:10,803 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2019-01-21 14:41:10,806 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2019-01-21 14:41:10,818 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 66.2451ms 304 application/javascript
+INFO  2019-01-21 14:41:10,848 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 74.3317ms 304 text/css
+INFO  2019-01-21 14:41:10,865 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 70.773ms 304 application/javascript
+INFO  2019-01-21 14:41:11,330 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-01-21 14:41:11,749 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 417.5542ms 200 application/json;charset=utf-8
+INFO  2019-01-21 14:42:43,069 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10 text/plain 0
+INFO  2019-01-21 14:42:43,300 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 239.3452ms 404 
+INFO  2019-01-21 14:42:58,475 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10  
+INFO  2019-01-21 14:42:58,578 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 14:42:59,513 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+ERROR 2019-01-21 14:43:05,558 [18   ] Mvc.ExceptionHandling.AbpExceptionFilter - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync(GetJobInput input) in C:\GitRepository\ServiceTrigger (1)\4.4.0\aspnet-core\src\ServiceTrigger.Application\Jobs\JobAppService.cs:line 36
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-01-21 14:43:06,206 [18   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 14:43:06,256 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 7674.8545ms
+INFO  2019-01-21 14:43:06,274 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7796.4685ms 500 application/json; charset=utf-8
+INFO  2019-01-21 14:43:13,228 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10  
+INFO  2019-01-21 14:43:13,235 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 14:43:13,279 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+DEBUG 2019-01-21 14:53:03,251 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-01-21 14:53:03,500 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2019-01-21 14:53:03,535 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.Web.Host.Startup.ServiceTriggerWebHostModule, ServiceTrigger.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:03,540 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerWebCoreModule, ServiceTrigger.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:03,541 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerApplicationModule, ServiceTrigger.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:03,541 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerCoreModule, ServiceTrigger.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:03,542 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:03,542 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:03,542 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:03,543 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:03,544 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.EntityFrameworkCore.ServiceTriggerEntityFrameworkModule, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:03,544 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:03,544 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:03,545 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:03,545 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:03,545 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:03,546 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:03,551 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2019-01-21 14:53:03,672 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 14:53:03,672 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 14:53:03,672 [1    ] o.Configuration.LanguageManagementConfig - Converted ServiceTrigger (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 14:53:03,672 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 14:53:04,199 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ServiceTrigger.EntityFrameworkCore.ServiceTriggerDbContext, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 14:53:05,639 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-01-21 14:53:05,725 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-01-21 14:53:05,803 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-01-21 14:53:05,852 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ServiceTrigger
+DEBUG 2019-01-21 14:53:05,905 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-01-21 14:53:06,142 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-01-21 14:53:06,217 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 11 classes define auto mapping attributes
+DEBUG 2019-01-21 14:53:06,217 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-01-21 14:53:06,230 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.CreateUserDto
+DEBUG 2019-01-21 14:53:06,231 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.UserDto
+DEBUG 2019-01-21 14:53:06,232 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-01-21 14:53:06,232 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-01-21 14:53:06,232 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.CreateRoleDto
+DEBUG 2019-01-21 14:53:06,232 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.PermissionDto
+DEBUG 2019-01-21 14:53:06,233 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.RoleDto
+DEBUG 2019-01-21 14:53:06,234 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-01-21 14:53:06,234 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.TenantDto
+DEBUG 2019-01-21 14:53:06,234 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Jobs.Dtos.JobListDto
+INFO  2019-01-21 14:53:14,190 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2019-01-21 14:53:14,190 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-01-21 14:53:14,357 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 180.4547ms 200 
+INFO  2019-01-21 14:53:28,845 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host)
+INFO  2019-01-21 14:53:30,327 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host) - Validation state: Valid
+INFO  2019-01-21 14:53:30,337 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 3.6814ms.
+INFO  2019-01-21 14:53:30,753 [9    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-01-21 14:53:30,775 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host) in 1919.1788ms
+INFO  2019-01-21 14:53:30,793 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-01-21 14:53:30,810 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 16640.8412ms 302 
+INFO  2019-01-21 14:53:30,873 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 79.0719ms 200 text/html
+INFO  2019-01-21 14:53:30,922 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2019-01-21 14:53:30,926 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2019-01-21 14:53:30,928 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2019-01-21 14:53:30,981 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2019-01-21 14:53:30,983 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2019-01-21 14:53:30,989 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2019-01-21 14:53:31,008 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 70.9269ms 304 application/javascript
+INFO  2019-01-21 14:53:31,013 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 76.8573ms 304 text/css
+INFO  2019-01-21 14:53:31,017 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 74.8954ms 304 application/javascript
+INFO  2019-01-21 14:53:31,490 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-01-21 14:53:31,950 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 460.6686ms 200 application/json;charset=utf-8
+INFO  2019-01-21 14:54:10,142 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10  
+INFO  2019-01-21 14:54:10,244 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 14:54:11,298 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+INFO  2019-01-21 14:54:15,690 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4389.3595ms.
+INFO  2019-01-21 14:54:15,841 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 14:54:15,897 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 5649.8763ms
+INFO  2019-01-21 14:54:15,910 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5767.5819ms 200 application/json; charset=utf-8
+INFO  2019-01-21 14:54:26,032 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?FilterText=22&SkipCount=0&MaxResultCount=10  
+INFO  2019-01-21 14:54:26,047 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 14:54:26,084 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+INFO  2019-01-21 14:54:31,133 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5046.0131ms.
+INFO  2019-01-21 14:54:31,187 [15   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 14:54:31,190 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 5140.3562ms
+INFO  2019-01-21 14:54:31,193 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5160.9534ms 200 application/json; charset=utf-8
+INFO  2019-01-21 15:01:15,305 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?FilterText=22&SkipCount=0&MaxResultCount=10&Sorting=11  
+INFO  2019-01-21 15:01:15,314 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 15:01:15,360 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+INFO  2019-01-21 15:01:18,274 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2911.6374ms.
+INFO  2019-01-21 15:01:18,306 [15   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 15:01:18,310 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 2992.5181ms
+INFO  2019-01-21 15:01:18,314 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3007.2141ms 200 application/json; charset=utf-8
+INFO  2019-01-21 15:01:42,726 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10 text/plain 0
+INFO  2019-01-21 15:01:42,745 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 16.6006ms 404 
+INFO  2019-01-21 15:02:33,197 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10  
+INFO  2019-01-21 15:02:33,204 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 15:02:33,240 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+INFO  2019-01-21 15:02:35,201 [32   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1956.7667ms.
+INFO  2019-01-21 15:02:35,300 [36   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 15:02:35,304 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 2096.2162ms
+INFO  2019-01-21 15:02:35,308 [36   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2109.0513ms 200 application/json; charset=utf-8
+INFO  2019-01-21 15:03:10,375 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10  
+INFO  2019-01-21 15:03:10,389 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 15:03:10,432 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+INFO  2019-01-21 15:03:12,129 [36   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1694.7147ms.
+INFO  2019-01-21 15:03:12,249 [35   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 15:03:12,252 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 1860.04ms
+INFO  2019-01-21 15:03:12,254 [35   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1880.6206ms 200 application/json; charset=utf-8
+INFO  2019-01-21 15:03:32,213 [23   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10 text/plain 
+INFO  2019-01-21 15:03:32,225 [23   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 15:03:32,281 [23   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+INFO  2019-01-21 15:03:34,746 [35   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2462.9338ms.
+INFO  2019-01-21 15:03:34,866 [37   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 15:03:34,869 [37   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 2640.4606ms
+INFO  2019-01-21 15:03:34,873 [37   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2661.5485ms 200 application/json; charset=utf-8
+DEBUG 2019-01-21 15:08:01,691 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-01-21 15:08:01,727 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2019-01-21 15:08:01,754 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.Web.Host.Startup.ServiceTriggerWebHostModule, ServiceTrigger.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:01,758 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerWebCoreModule, ServiceTrigger.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:01,759 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerApplicationModule, ServiceTrigger.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:01,759 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerCoreModule, ServiceTrigger.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:01,759 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:01,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:01,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:01,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:01,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.EntityFrameworkCore.ServiceTriggerEntityFrameworkModule, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:01,762 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:01,762 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:01,763 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:01,763 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:01,763 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:01,764 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:01,769 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2019-01-21 15:08:01,858 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 15:08:01,858 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 15:08:01,858 [1    ] o.Configuration.LanguageManagementConfig - Converted ServiceTrigger (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 15:08:01,858 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 15:08:02,294 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ServiceTrigger.EntityFrameworkCore.ServiceTriggerDbContext, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:08:02,944 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-01-21 15:08:03,031 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-01-21 15:08:03,132 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-01-21 15:08:03,194 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ServiceTrigger
+DEBUG 2019-01-21 15:08:03,245 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-01-21 15:08:03,310 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-01-21 15:08:03,395 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 11 classes define auto mapping attributes
+DEBUG 2019-01-21 15:08:03,395 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-01-21 15:08:03,408 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.CreateUserDto
+DEBUG 2019-01-21 15:08:03,409 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.UserDto
+DEBUG 2019-01-21 15:08:03,410 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-01-21 15:08:03,410 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-01-21 15:08:03,410 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.CreateRoleDto
+DEBUG 2019-01-21 15:08:03,410 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.PermissionDto
+DEBUG 2019-01-21 15:08:03,410 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.RoleDto
+DEBUG 2019-01-21 15:08:03,412 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-01-21 15:08:03,412 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.TenantDto
+DEBUG 2019-01-21 15:08:03,412 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Jobs.Dtos.JobListDto
+INFO  2019-01-21 15:08:10,175 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10  
+INFO  2019-01-21 15:08:12,313 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 15:08:12,961 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+INFO  2019-01-21 15:08:13,261 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 293.773ms.
+INFO  2019-01-21 15:08:13,784 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 15:08:13,943 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 1623.4447ms
+INFO  2019-01-21 15:08:13,989 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3821.8841ms 200 application/json; charset=utf-8
+DEBUG 2019-01-21 15:14:20,128 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-01-21 15:14:20,335 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2019-01-21 15:14:20,362 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.Web.Host.Startup.ServiceTriggerWebHostModule, ServiceTrigger.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:20,368 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerWebCoreModule, ServiceTrigger.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:20,369 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerApplicationModule, ServiceTrigger.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:20,370 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerCoreModule, ServiceTrigger.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:20,370 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:20,371 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:20,371 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:20,372 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:20,373 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.EntityFrameworkCore.ServiceTriggerEntityFrameworkModule, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:20,373 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:20,374 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:20,374 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:20,375 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:20,375 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:20,376 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:20,382 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2019-01-21 15:14:20,521 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 15:14:20,521 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 15:14:20,521 [1    ] o.Configuration.LanguageManagementConfig - Converted ServiceTrigger (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 15:14:20,521 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 15:14:21,106 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ServiceTrigger.EntityFrameworkCore.ServiceTriggerDbContext, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 15:14:23,056 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-01-21 15:14:23,176 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-01-21 15:14:23,252 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-01-21 15:14:23,296 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ServiceTrigger
+DEBUG 2019-01-21 15:14:23,346 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-01-21 15:14:23,698 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-01-21 15:14:23,779 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 11 classes define auto mapping attributes
+DEBUG 2019-01-21 15:14:23,779 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-01-21 15:14:23,792 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.CreateUserDto
+DEBUG 2019-01-21 15:14:23,793 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.UserDto
+DEBUG 2019-01-21 15:14:23,794 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-01-21 15:14:23,794 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-01-21 15:14:23,794 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.CreateRoleDto
+DEBUG 2019-01-21 15:14:23,794 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.PermissionDto
+DEBUG 2019-01-21 15:14:23,794 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.RoleDto
+DEBUG 2019-01-21 15:14:23,795 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-01-21 15:14:23,796 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.TenantDto
+DEBUG 2019-01-21 15:14:23,796 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Jobs.Dtos.JobListDto
+INFO  2019-01-21 15:14:33,104 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2019-01-21 15:14:33,104 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-01-21 15:14:33,276 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 183.2133ms 200 
+INFO  2019-01-21 15:14:50,691 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host)
+INFO  2019-01-21 15:14:52,658 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host) - Validation state: Valid
+INFO  2019-01-21 15:14:52,672 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 5.3943ms.
+INFO  2019-01-21 15:14:53,100 [6    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-01-21 15:14:53,125 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host) in 2422.7358ms
+INFO  2019-01-21 15:14:53,145 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-01-21 15:14:53,156 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 20069.3601ms 302 
+INFO  2019-01-21 15:14:53,222 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 77.3709ms 200 text/html
+INFO  2019-01-21 15:14:53,294 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2019-01-21 15:14:53,299 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2019-01-21 15:14:53,304 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2019-01-21 15:14:53,347 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2019-01-21 15:14:53,351 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2019-01-21 15:14:53,354 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2019-01-21 15:14:53,367 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 60.7947ms 304 application/javascript
+INFO  2019-01-21 15:14:53,371 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 70.1891ms 304 text/css
+INFO  2019-01-21 15:14:53,374 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 71.4077ms 304 application/javascript
+INFO  2019-01-21 15:14:53,999 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-01-21 15:14:54,525 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 525.6656ms 200 application/json;charset=utf-8
+INFO  2019-01-21 15:15:09,238 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Job/GetPagedJobAsync?SkipCount=0&MaxResultCount=10 text/plain 
+INFO  2019-01-21 15:15:09,361 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedJobAsync", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application)
+INFO  2019-01-21 15:15:11,101 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.GetJobInput) - Validation state: Valid
+INFO  2019-01-21 15:15:11,634 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 527.6828ms.
+INFO  2019-01-21 15:15:11,818 [12   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 15:15:11,902 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.GetPagedJobAsync (ServiceTrigger.Application) in 2537.6295ms
+INFO  2019-01-21 15:15:11,926 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2690.3716ms 200 application/json; charset=utf-8

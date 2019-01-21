@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using Abp.Reflection.Extensions;
 
 namespace ServiceTrigger.Web
 {
@@ -12,7 +13,7 @@ namespace ServiceTrigger.Web
     {
         public static string CalculateContentRootFolder()
         {
-            var coreAssemblyDirectoryPath = Path.GetDirectoryName(AppContext.BaseDirectory);
+            var coreAssemblyDirectoryPath = Path.GetDirectoryName(typeof(ServiceTriggerCoreModule).GetAssembly().Location);
             if (coreAssemblyDirectoryPath == null)
             {
                 throw new Exception("Could not find location of ServiceTrigger.Core assembly!");
@@ -29,7 +30,19 @@ namespace ServiceTrigger.Web
                 directoryInfo = directoryInfo.Parent;
             }
 
-            return Path.Combine(directoryInfo.FullName, $"src{Path.DirectorySeparatorChar}ServiceTrigger.Web");
+            var webMvcFolder = Path.Combine(directoryInfo.FullName, "src", "ServiceTrigger.Web.Mvc");
+            if (Directory.Exists(webMvcFolder))
+            {
+                return webMvcFolder;
+            }
+
+            var webHostFolder = Path.Combine(directoryInfo.FullName, "src", "ServiceTrigger.Web.Host");
+            if (Directory.Exists(webHostFolder))
+            {
+                return webHostFolder;
+            }
+
+            throw new Exception("Could not find root folder of the web project!");
         }
 
         private static bool DirectoryContains(string directory, string fileName)

@@ -1,50 +1,60 @@
-using System.Reflection;
-using Abp.Modules;
-using Abp.Reflection.Extensions;
-using Abp.TestBase;
-using ServiceTrigger.EntityFrameworkCore;
+using System;
 using Castle.MicroKernel.Registration;
-using Castle.Windsor.MsDependencyInjection;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+using NSubstitute;
+using Abp.AutoMapper;
+using Abp.Dependency;
+using Abp.Modules;
+using Abp.Configuration.Startup;
+using Abp.Net.Mail;
+using Abp.TestBase;
+using Abp.Zero.Configuration;
+using Abp.Zero.EntityFrameworkCore;
+using ServiceTrigger.EntityFrameworkCore;
+using ServiceTrigger.Tests.DependencyInjection;
 
 namespace ServiceTrigger.Tests
 {
     [DependsOn(
         typeof(ServiceTriggerApplicationModule),
-        typeof(ServiceTriggerEntityFrameworkCoreModule),
+        typeof(ServiceTriggerEntityFrameworkModule),
         typeof(AbpTestBaseModule)
         )]
     public class ServiceTriggerTestModule : AbpModule
     {
+        public ServiceTriggerTestModule(ServiceTriggerEntityFrameworkModule abpProjectNameEntityFrameworkModule)
+        {
+            abpProjectNameEntityFrameworkModule.SkipDbContextRegistration = true;
+            abpProjectNameEntityFrameworkModule.SkipDbSeed = true;
+        }
+
         public override void PreInitialize()
         {
-            Configuration.UnitOfWork.IsTransactional = false; //EF Core InMemory DB does not support transactions.
-            SetupInMemoryDb();
+            Configuration.UnitOfWork.Timeout = TimeSpan.FromMinutes(30);
+            Configuration.UnitOfWork.IsTransactional = false;
+
+            // Disable static mapper usage since it breaks unit tests (see https://github.com/aspnetboilerplate/aspnetboilerplate/issues/2052)
+            Configuration.Modules.AbpAutoMapper().UseStaticMapper = false;
+
+            Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
+
+            // Use database for language management
+            Configuration.Modules.Zero().LanguageManagement.EnableDbLocalization();
+
+            RegisterFakeService<AbpZeroDbMigrator<ServiceTriggerDbContext>>();
+
+            Configuration.ReplaceService<IEmailSender, NullEmailSender>(DependencyLifeStyle.Transient);
         }
 
         public override void Initialize()
         {
-            IocManager.RegisterAssemblyByConvention(typeof(ServiceTriggerTestModule).GetAssembly());
+            ServiceCollectionRegistrar.Register(IocManager);
         }
 
-        private void SetupInMemoryDb()
+        private void RegisterFakeService<TService>() where TService : class
         {
-            var services = new ServiceCollection()
-                .AddEntityFrameworkInMemoryDatabase();
-
-            var serviceProvider = WindsorRegistrationHelper.CreateServiceProvider(
-                IocManager.IocContainer,
-                services
-            );
-
-            var builder = new DbContextOptionsBuilder<ServiceTriggerDbContext>();
-            builder.UseInMemoryDatabase().UseInternalServiceProvider(serviceProvider);
-
             IocManager.IocContainer.Register(
-                Component
-                    .For<DbContextOptions<ServiceTriggerDbContext>>()
-                    .Instance(builder.Options)
+                Component.For<TService>()
+                    .UsingFactoryMethod(() => Substitute.For<TService>())
                     .LifestyleSingleton()
             );
         }

@@ -1,5 +1,6 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
+using Abp.Domain.Entities;
 using ServiceTrigger.Jobs.Dtos;
 using System;
 using System.Collections.Generic;
@@ -21,19 +22,19 @@ namespace ServiceTrigger.Jobs
         /// 根据ID获取定时任务信息
         /// </summary>
         /// <returns></returns>
-        Task<JobEditDto> GetJobByIdAsync();
+        Task<JobListDto> GetJobByIdAsync(EntityDto<int> input);
 
         /// <summary>
         /// 新增或更改定时任务信息
         /// </summary>
         /// <returns></returns>
-        Task CreateOrUpdateJobAsync();
+        Task CreateOrUpdateJobAsync(CreateOrUpdateJobInput dto);
 
         /// <summary>
         /// 删除定时任务
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        Task DeleteJobAsync(EntityDto entity);
+        Task DeleteJobAsync(EntityDto<int> entity);
     }
 }

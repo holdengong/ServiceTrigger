@@ -22,19 +22,51 @@ namespace ServiceTrigger.Jobs
             _jobRepository = JobRepository;
         }
 
-        public Task CreateOrUpdateJobAsync()
+        public async Task CreateOrUpdateJobAsync(CreateOrUpdateJobInput input)
         {
-            throw new NotImplementedException();
+            if (input.Job.Id.HasValue && input.Job.Id > 0)
+            {
+                await UpdateJobAsync(input.Job);
+            }
+            else
+            {
+                await CreateJobAsync(input.Job);
+            }
         }
 
-        public async Task DeleteJobAsync(EntityDto entity)
+        protected virtual async Task CreateJobAsync(JobEditDto input)
         {
-            throw new NotImplementedException();
+            //TODO:新增前的逻辑判断，是否允许新增
+            var entity = input.MapTo<Job>();
+
+            await _jobRepository.InsertAsync(entity);
         }
 
-        public Task<JobEditDto> GetJobByIdAsync()
+        /// <summary>
+        ///     编辑Person
+        /// </summary>
+        protected virtual async Task UpdateJobAsync(JobEditDto input)
         {
-            throw new NotImplementedException();
+            //TODO:更新前的逻辑判断，是否允许更新
+            var entity = await _jobRepository.GetAsync(input.Id.Value);
+            input.MapTo(entity);
+
+            // ObjectMapper.Map(input, entity);
+            await _jobRepository.UpdateAsync(entity);
+        }
+
+        public async Task DeleteJobAsync(EntityDto<int> entity)
+        {
+            //删除前的逻辑，是否允许删除
+
+            await _jobRepository.DeleteAsync(entity.Id);
+        }
+
+        public async Task<JobListDto> GetJobByIdAsync(EntityDto<int> input)
+        {
+            var entity = await _jobRepository.GetAsync(input.Id);
+
+            return entity.MapTo<JobListDto>();
         }
 
         public async Task<PagedResultDto<JobListDto>> GetPagedJobAsync(GetJobInput input)

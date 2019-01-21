@@ -2,6 +2,7 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using ServiceTrigger.Authorization;
+using ServiceTrigger.Jobs.Dtos.LTMAutoMapper;
 
 namespace ServiceTrigger
 {
@@ -13,6 +14,8 @@ namespace ServiceTrigger
         public override void PreInitialize()
         {
             Configuration.Authorization.Providers.Add<ServiceTriggerAuthorizationProvider>();
+
+            Configuration.Modules.AbpAutoMapper().Configurators.Add(CustomJobMapper.CreateMappings);
         }
 
         public override void Initialize()

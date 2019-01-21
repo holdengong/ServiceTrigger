@@ -10,7 +10,7 @@ namespace ServiceTrigger.Jobs
     public class Job : FullAuditedEntity
     {
         [Required]
-        [MaxLength(255)]
+        [MaxLength(ServiceTriggerConsts.MaxNameLength)]
         public string JobName { get; set; }
 
         [Required]

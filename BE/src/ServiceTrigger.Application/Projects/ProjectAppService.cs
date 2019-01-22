@@ -27,20 +27,13 @@ namespace ServiceTrigger.Jobs
             _jobRepository = JobRepository;
         }
 
-        public async Task CreateOrUpdateProjectAsync(CreateOrUpdateProjectInput input)
+        public async Task Create(ProjectEditDto input)
         {
-            if (input.Project.Id.HasValue && input.Project.Id > 0)
+            if (await _projectRepository.CountAsync(e => e.ProjectName == input.ProjectName) > 0)
             {
-                await UpdateProjectAsync(input.Project);
+                throw new UserFriendlyException("该项目名称已存在");
             }
-            else
-            {
-                await CreateProjectAsync(input.Project);
-            }
-        }
 
-        protected virtual async Task CreateProjectAsync(ProjectEditDto input)
-        {
             //TODO:新增前的逻辑判断，是否允许新增
             var entity = ObjectMapper.Map<Project>(input);
 
@@ -50,7 +43,7 @@ namespace ServiceTrigger.Jobs
         /// <summary>
         ///     编辑Person
         /// </summary>
-        protected virtual async Task UpdateProjectAsync(ProjectEditDto input)
+        public async Task Update(ProjectEditDto input)
         {
             //TODO:更新前的逻辑判断，是否允许更新
             var entity = await _projectRepository.GetAsync(input.Id.Value);
@@ -61,7 +54,7 @@ namespace ServiceTrigger.Jobs
             await _projectRepository.UpdateAsync(entity);
         }
 
-        public async Task DeleteProjectAsync(EntityDto<int> entity)
+        public async Task Delete(EntityDto<int> entity)
         {
             //删除前的逻辑，是否允许删除
             var jobCount = await _jobRepository.CountAsync(e => e.ProjectId == entity.Id);
@@ -74,14 +67,14 @@ namespace ServiceTrigger.Jobs
             await _projectRepository.DeleteAsync(entity.Id);
         }
 
-        public async Task<ProjectListDto> GetProjectByIdAsync(EntityDto<int> input)
+        public async Task<ProjectListDto> Get(EntityDto<int> input)
         {
             var entity = await _projectRepository.GetAsync(input.Id);
 
             return ObjectMapper.Map<ProjectListDto>(entity);
         }
 
-        public async Task<PagedResultDto<ProjectListDto>> GetPagedProjectAsync(GetProjectInput input)
+        public async Task<PagedResultDto<ProjectListDto>> GetAll(GetProjectInput input)
         {
             var query = _projectRepository.GetAll();
 

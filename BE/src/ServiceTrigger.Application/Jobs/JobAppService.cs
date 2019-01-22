@@ -28,9 +28,73 @@ namespace ServiceTrigger.Jobs
             _backgroundWorkerManager = backgroundWorkerManager;
         }
 
-        public async Task CreateOrUpdateJobAsync(CreateOrUpdateJobInput input)
+        public async Task Create(JobEditDto input)
         {
-            var project = await _projectRepository.GetAsync(input.Job.ProjectId);
+            //TODO:新增前的逻辑判断，是否允许新增
+            var entity = ObjectMapper.Map<Job>(input);
+
+            entity.Id = await _jobRepository.InsertAndGetIdAsync(entity);
+
+            RegisterJobInHangfire(entity);
+        }
+
+        /// <summary>
+        ///     编辑Person
+        /// </summary>
+        public async Task Update(JobEditDto input)
+        {
+            //TODO:更新前的逻辑判断，是否允许更新
+            var entity = await _jobRepository.GetAsync(input.Id.Value);
+
+            entity = ObjectMapper.Map(input, entity);
+
+            // ObjectMapper.Map(input, entity);
+            await _jobRepository.UpdateAsync(entity);
+
+            RegisterJobInHangfire(entity);
+        }
+
+        public async Task Delete(EntityDto<int> entity)
+        {
+            //删除前的逻辑，是否允许删除
+
+            await _jobRepository.DeleteAsync(entity.Id);
+        }
+
+        public async Task<JobListDto> Get(EntityDto<int> input)
+        {
+            var entity = await _jobRepository.GetAsync(input.Id);
+
+            return ObjectMapper.Map<JobListDto>(entity);
+        }
+
+        public async Task<PagedResultDto<JobListDto>> GetAll(GetJobInput input)
+        {
+            var query = _jobRepository.GetAll();
+
+            var jobsCount = await query.CountAsync();
+
+            var jobs = await query.OrderBy(input.Sorting).PageBy(input).ToListAsync();
+
+            var dtos = ObjectMapper.Map<List<JobListDto>> (jobs);
+
+            return new PagedResultDto<JobListDto>(jobsCount, dtos);
+        }
+
+        public async Task UpdateStatus(UpdateJobStatusInput input)
+        {
+            var job = await _jobRepository.GetAsync(input.Id);
+
+            if (job != null)
+            {
+                job.IsEnable = input.IsEnable;
+                await _jobRepository.UpdateAsync(job);
+            }
+        }
+
+        protected async void RegisterJobInHangfire(Job entity)
+        {
+            var project = await _projectRepository.GetAsync(entity.ProjectId);
 
             if (project == null)
             {
@@ -39,25 +103,15 @@ namespace ServiceTrigger.Jobs
 
             var projectHost = project.Host;
 
-            var jobId = input.Job.Id;
-
-            if (input.Job.Id.HasValue && input.Job.Id > 0)
-            {
-                await UpdateJobAsync(input.Job);
-            }
-            else
-            {
-                jobId = await CreateJobAsync(input.Job);
-            }
 
             SendRequestJobArgs args = new SendRequestJobArgs()
             {
                 Host = projectHost,
-                ApiUrl = input.Job.ApiUrl
+                ApiUrl = entity.ApiUrl
             };
 
             string cron = Cron.Daily();
-            switch (input.Job.Frequency)
+            switch (entity.Frequency)
             {
                 case FrequencyEnum.Minutely:
                     cron = Cron.Minutely();
@@ -75,69 +129,7 @@ namespace ServiceTrigger.Jobs
                     break;
             }
 
-            RecurringJob.AddOrUpdate<SendRequestJob>(jobId.ToString(), e => e.Execute(args), cron);
-        }
-
-        protected virtual async Task<int> CreateJobAsync(JobEditDto input)
-        {
-            //TODO:新增前的逻辑判断，是否允许新增
-            var entity = ObjectMapper.Map<Job>(input); 
-
-            var jobId = await _jobRepository.InsertAndGetIdAsync(entity);
-
-            return jobId;
-        }
-
-        /// <summary>
-        ///     编辑Person
-        /// </summary>
-        protected virtual async Task UpdateJobAsync(JobEditDto input)
-        {
-            //TODO:更新前的逻辑判断，是否允许更新
-            var entity = await _jobRepository.GetAsync(input.Id.Value);
-
-            entity = ObjectMapper.Map(input, entity);
-
-            // ObjectMapper.Map(input, entity);
-            await _jobRepository.UpdateAsync(entity);
-        }
-
-        public async Task DeleteJobAsync(EntityDto<int> entity)
-        {
-            //删除前的逻辑，是否允许删除
-
-            await _jobRepository.DeleteAsync(entity.Id);
-        }
-
-        public async Task<JobListDto> GetJobByIdAsync(EntityDto<int> input)
-        {
-            var entity = await _jobRepository.GetAsync(input.Id);
-
-            return ObjectMapper.Map<JobListDto>(entity);
-        }
-
-        public async Task<PagedResultDto<JobListDto>> GetPagedJobAsync(GetJobInput input)
-        {
-            var query = _jobRepository.GetAll();
-
-            var jobsCount = await query.CountAsync();
-
-            var jobs = await query.OrderBy(input.Sorting).PageBy(input).ToListAsync();
-
-            var dtos = ObjectMapper.Map<List<JobListDto>> (jobs);
-
-            return new PagedResultDto<JobListDto>(jobsCount, dtos);
-        }
-
-        public async Task UpdateJobStatus(UpdateJobStatusInput input)
-        {
-            var job = await _jobRepository.GetAsync(input.Id);
-
-            if (job != null)
-            {
-                job.IsEnable = input.IsEnable;
-                await _jobRepository.UpdateAsync(job);
-            }
+            RecurringJob.AddOrUpdate<SendRequestJob>(entity.Id.ToString(), e => e.Execute(args), cron);
         }
     }
 }

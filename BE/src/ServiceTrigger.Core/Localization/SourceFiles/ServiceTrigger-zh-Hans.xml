@@ -96,8 +96,16 @@
     <text name="DefaultPasswordIs">默认密码为：{0}</text>
     <text name="DeleteTenantConfirm">确认删除该租户？</text>
     <text name="EditTenant">编辑租户</text>
-    
-    
+
+    <text name="Projects">项目</text>
+    <text name="CreateNewProject">创建新项目</text>
+    <text name="ProjectDetails">项目详情</text>
+    <text name="EditProject">编辑项目</text>
+    <text name="DeleteProjectConfirm">确认删除该项目？</text>
+    <text name="ProjectName">项目名称</text>
+    <text name="Host">域名(例如：http://www.31huiyi.com)</text>
+  
+    <text name="Dashboard">仪表盘</text>
   </texts>
 </localizationDictionary>
 

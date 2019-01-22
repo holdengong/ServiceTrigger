@@ -21,10 +21,10 @@ namespace ServiceTrigger.Tests.Users
 
 
         [Fact]
-        public async Task List_Test()
+        public async Task GetAll_Test()
         {
             // Act
-            var output = await _jobAppService.GetPagedJobAsync(new GetJobInput()
+            var output = await _jobAppService.GetAll(new GetJobInput()
             {
                 MaxResultCount = 20,
                 SkipCount = 0
@@ -37,19 +37,16 @@ namespace ServiceTrigger.Tests.Users
         [Fact]
         public async Task Create_Test()
         {
-            await _jobAppService.CreateOrUpdateJobAsync(
-                new CreateOrUpdateJobInput()
-                {
-                    Job = new JobEditDto()
-                    {
-                        ApiUrl = "api/job/create",
-                        Frequency = FrequencyEnum.Daily,
-                        IsEnable = false,
-                        JobName = "myJob",
-                        ProjectId = 1,
-                        Id = 0
-                    }
-                });
+            await _jobAppService.Create(
+                                        new JobEditDto()
+                                        {
+                                            ApiUrl = "api/job/create",
+                                            Frequency = FrequencyEnum.Daily,
+                                            IsEnable = false,
+                                            JobName = "myJob",
+                                            ProjectId = 1,
+                                            Id = 0
+                                        });
 
             await UsingDbContextAsync(async context =>
             {

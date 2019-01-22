@@ -16,32 +16,38 @@ namespace ServiceTrigger.Jobs
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task<PagedResultDto<JobListDto>> GetPagedJobAsync(GetJobInput input);
+        Task<PagedResultDto<JobListDto>> GetAll(GetJobInput input);
 
         /// <summary>
         /// 根据ID获取定时任务信息
         /// </summary>
         /// <returns></returns>
-        Task<JobListDto> GetJobByIdAsync(EntityDto<int> input);
+        Task<JobListDto> Get(EntityDto<int> input);
 
         /// <summary>
-        /// 新增或更改定时任务信息
+        /// 新增定时任务信息
         /// </summary>
         /// <returns></returns>
-        Task CreateOrUpdateJobAsync(CreateOrUpdateJobInput dto);
+        Task Create(JobEditDto dto);
+
+        /// <summary>
+        /// 修改定时任务信息
+        /// </summary>
+        /// <returns></returns>
+        Task Update(JobEditDto dto);
 
         /// <summary>
         /// 删除定时任务
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        Task DeleteJobAsync(EntityDto<int> entity);
+        Task Delete(EntityDto<int> entity);
 
         /// <summary>
         /// 更新任务是否启用
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task UpdateJobStatus(UpdateJobStatusInput input);
+        Task UpdateStatus(UpdateJobStatusInput input);
     }
 }

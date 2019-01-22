@@ -3,6 +3,8 @@ using Microsoft.Extensions.Configuration;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using ServiceTrigger.Configuration;
+using Abp.Hangfire.Configuration;
+using Abp.Hangfire;
 
 namespace ServiceTrigger.Web.Host.Startup
 {
@@ -17,6 +19,10 @@ namespace ServiceTrigger.Web.Host.Startup
         {
             _env = env;
             _appConfiguration = env.GetAppConfiguration();
+        }
+
+        public override void PreInitialize()
+        {
         }
 
         public override void Initialize()

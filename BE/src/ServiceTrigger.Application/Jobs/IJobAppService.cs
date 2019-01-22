@@ -36,5 +36,12 @@ namespace ServiceTrigger.Jobs
         /// <param name="entity"></param>
         /// <returns></returns>
         Task DeleteJobAsync(EntityDto<int> entity);
+
+        /// <summary>
+        /// 更新任务是否启用
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        Task UpdateJobStatus(UpdateJobStatusInput input);
     }
 }

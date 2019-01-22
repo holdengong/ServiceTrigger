@@ -1,21 +1,35 @@
-# agamotto
+# ASP.NET Boilerplate VueJS Template
 
-> A Vue.js project
+The Vue.js integration for ABP Boilerplate framework. This template is built on Vue+iview+Typescript.
 
-## Build Setup
+![](_screenshots/roles.png)
 
-``` bash
-# install dependencies
-npm install
+## Getting Started
 
-# serve with hot reload at localhost:8080
-npm run dev
+### Installing
 
-# build for production with minification
-npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
+```sh
+cd vue
+yarn install 
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+And then start
+
+```
+yarn serve
+```
+
+## Deployment
+
+```sh
+yarn build
+```
+
+## Built With
+
+* [Vue](https://vuejs.org/) - The Progressive JavaScript Framework
+* [Typescript](https://www.typescriptlang.org/) - Used for static typing
+* [Vuex](https://vuex.vuejs.org/) - Vuex is a state management pattern + library for Vue.js applications. 
+* [iView](https://www.iviewui.com/) - A High quality and rich functions, friendly APIs, free and flexible UI Toolkit based on Vue.js.
+

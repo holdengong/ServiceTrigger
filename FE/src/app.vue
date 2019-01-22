@@ -1,38 +1,26 @@
 <template>
   <div id="app">
-    <div class="container">
-      <app-header></app-header>
-    </div>
-    <div class="container">
-      <router-view></router-view>
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 
-<script>
-import Header from './components/Header'
-export default{
-  components:{
-    appHeader:Header
-  },
-  created(){
-    fetch("/apis/test/testToken.php",{
-      method:"post"
-      ,body:"hello"
-    })
-    .then(result=>{
-      console.log(result);
-    });
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
 
-    /* this.$axios.post("/apis/test/testToken.php",
-    {username:"111",password:"222"}
-    ).then(data=>{
-        console.log(data);
-    }) */
-  }
-}
+@Component({
+
+})
+export default class App extends Vue {}
 </script>
 
 <style>
-
+html,body{
+    width: 100%;
+    height: 100%;
+    background: #f0f0f0;
+    overflow: hidden;
+}
+#app{
+  height: 100%;
+}
 </style>

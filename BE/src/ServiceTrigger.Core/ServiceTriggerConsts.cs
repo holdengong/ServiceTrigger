@@ -6,6 +6,9 @@
 
         public const string ConnectionStringName = "Default";
 
+        /// <summary>
+        /// 是否启用租户
+        /// </summary>
         public const bool MultiTenancyEnabled = true;
 
         /// <summary>

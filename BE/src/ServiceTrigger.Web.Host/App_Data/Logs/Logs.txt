@@ -9738,3 +9738,744 @@ INFO  2019-01-21 18:05:12,649 [13   ] ore.Mvc.Internal.ControllerActionInvoker -
 INFO  2019-01-21 18:05:12,891 [7    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
 INFO  2019-01-21 18:05:12,938 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.CreateOrUpdateJobAsync (ServiceTrigger.Application) in 14449.4548ms
 INFO  2019-01-21 18:05:12,964 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14574.7365ms 200 application/json; charset=utf-8
+DEBUG 2019-01-21 18:39:55,799 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-01-21 18:39:56,079 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2019-01-21 18:39:56,115 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.Web.Host.Startup.ServiceTriggerWebHostModule, ServiceTrigger.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:56,121 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerWebCoreModule, ServiceTrigger.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:56,121 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerApplicationModule, ServiceTrigger.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:56,122 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerCoreModule, ServiceTrigger.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:56,122 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:56,123 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:56,123 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:56,125 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:56,126 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.EntityFrameworkCore.ServiceTriggerEntityFrameworkModule, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:56,126 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:56,126 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:56,127 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:56,127 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:56,128 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:56,128 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:56,135 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2019-01-21 18:39:56,289 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 18:39:56,289 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 18:39:56,289 [1    ] o.Configuration.LanguageManagementConfig - Converted ServiceTrigger (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 18:39:56,289 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-21 18:39:56,929 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ServiceTrigger.EntityFrameworkCore.ServiceTriggerDbContext, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-21 18:39:59,036 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-01-21 18:39:59,150 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-01-21 18:39:59,222 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-01-21 18:39:59,269 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ServiceTrigger
+DEBUG 2019-01-21 18:39:59,322 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-01-21 18:39:59,713 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-01-21 18:39:59,800 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2019-01-21 18:39:59,800 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-01-21 18:39:59,813 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.CreateUserDto
+DEBUG 2019-01-21 18:39:59,814 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.UserDto
+DEBUG 2019-01-21 18:39:59,814 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-01-21 18:39:59,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-01-21 18:39:59,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.CreateRoleDto
+DEBUG 2019-01-21 18:39:59,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.PermissionDto
+DEBUG 2019-01-21 18:39:59,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.RoleDto
+DEBUG 2019-01-21 18:39:59,816 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Projects.Dtos.ProjectListDto
+DEBUG 2019-01-21 18:39:59,816 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-01-21 18:39:59,817 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.TenantDto
+DEBUG 2019-01-21 18:39:59,817 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Jobs.Dtos.JobListDto
+INFO  2019-01-21 18:40:08,792 [1    ] Hangfire.MySql.Core.MySqlStorage         - DB tables already exist. Exit install
+INFO  2019-01-21 18:40:08,849 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2019-01-21 18:40:08,862 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'Server: localhost@servicetrigger'
+INFO  2019-01-21 18:40:08,868 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2019-01-21 18:40:08,873 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2019-01-21 18:40:08,877 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2019-01-21 18:40:08,882 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2019-01-21 18:40:08,888 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2019-01-21 18:40:08,892 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2019-01-21 18:40:08,897 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+INFO  2019-01-21 18:40:09,450 [chdog] Hangfire.Server.ServerWatchdog           - 2 servers were removed due to timeout
+INFO  2019-01-21 18:40:10,751 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-01-21 18:40:10,756 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2019-01-21 18:40:10,930 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 182.9172ms 200 
+INFO  2019-01-21 18:40:16,246 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Project/GetPagedProjectAsync?SkipCount=0&MaxResultCount=10 text/plain 
+INFO  2019-01-21 18:40:29,593 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host)
+INFO  2019-01-21 18:40:29,620 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetPagedProjectAsync", controller = "Project"}. Executing action ServiceTrigger.Jobs.ProjectAppService.GetPagedProjectAsync (ServiceTrigger.Application)
+INFO  2019-01-21 18:40:33,756 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host) - Validation state: Valid
+INFO  2019-01-21 18:40:33,774 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 7.2485ms.
+INFO  2019-01-21 18:40:34,003 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.ProjectAppService.GetPagedProjectAsync (ServiceTrigger.Application) with arguments (ServiceTrigger.Projects.Dtos.GetProjectInput) - Validation state: Valid
+INFO  2019-01-21 18:40:34,532 [11   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-01-21 18:40:34,560 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Jobs.ProjectAppService.GetPagedProjectAsync (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 551.9709ms.
+INFO  2019-01-21 18:40:34,585 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host) in 4976.6762ms
+INFO  2019-01-21 18:40:34,678 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 23937.8184ms 302 
+INFO  2019-01-21 18:40:34,682 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-01-21 18:40:34,695 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-21 18:40:34,767 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 85.1966ms 200 text/html
+INFO  2019-01-21 18:40:34,804 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.ProjectAppService.GetPagedProjectAsync (ServiceTrigger.Application) in 5178.5895ms
+INFO  2019-01-21 18:40:34,813 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 18562.8792ms 200 application/json; charset=utf-8
+INFO  2019-01-21 18:40:34,878 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2019-01-21 18:40:34,885 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2019-01-21 18:40:34,892 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2019-01-21 18:40:34,944 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2019-01-21 18:40:34,952 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2019-01-21 18:40:34,957 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2019-01-21 18:40:34,975 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 86.7393ms 304 application/javascript
+INFO  2019-01-21 18:40:34,980 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 84.7481ms 304 application/javascript
+INFO  2019-01-21 18:40:35,023 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 93.6826ms 304 text/css
+INFO  2019-01-21 18:40:35,648 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-01-21 18:40:36,266 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 617.279ms 200 application/json;charset=utf-8
+DEBUG 2019-01-22 09:27:06,428 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-01-22 09:27:06,624 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2019-01-22 09:27:06,660 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.Web.Host.Startup.ServiceTriggerWebHostModule, ServiceTrigger.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:06,665 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerWebCoreModule, ServiceTrigger.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:06,665 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerApplicationModule, ServiceTrigger.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:06,666 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerCoreModule, ServiceTrigger.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:06,666 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:06,667 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:06,667 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:06,668 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:06,668 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.EntityFrameworkCore.ServiceTriggerEntityFrameworkModule, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:06,669 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:06,669 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:06,670 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:06,670 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:06,670 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:06,671 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:06,675 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2019-01-22 09:27:06,784 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-22 09:27:06,784 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-22 09:27:06,784 [1    ] o.Configuration.LanguageManagementConfig - Converted ServiceTrigger (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-22 09:27:06,784 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-22 09:27:07,299 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ServiceTrigger.EntityFrameworkCore.ServiceTriggerDbContext, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:27:08,689 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-01-22 09:27:08,773 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-01-22 09:27:08,847 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-01-22 09:27:08,889 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ServiceTrigger
+DEBUG 2019-01-22 09:27:08,937 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-01-22 09:27:09,162 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-01-22 09:27:09,242 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2019-01-22 09:27:09,242 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-01-22 09:27:09,252 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.CreateUserDto
+DEBUG 2019-01-22 09:27:09,253 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.UserDto
+DEBUG 2019-01-22 09:27:09,254 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-01-22 09:27:09,254 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-01-22 09:27:09,254 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.CreateRoleDto
+DEBUG 2019-01-22 09:27:09,254 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.PermissionDto
+DEBUG 2019-01-22 09:27:09,254 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.RoleDto
+DEBUG 2019-01-22 09:27:09,256 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Projects.Dtos.ProjectListDto
+DEBUG 2019-01-22 09:27:09,256 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-01-22 09:27:09,256 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.TenantDto
+DEBUG 2019-01-22 09:27:09,256 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Jobs.Dtos.JobListDto
+INFO  2019-01-22 09:27:16,778 [1    ] Hangfire.MySql.Core.MySqlStorage         - DB tables already exist. Exit install
+INFO  2019-01-22 09:27:16,815 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2019-01-22 09:27:16,826 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'Server: localhost@servicetrigger'
+INFO  2019-01-22 09:27:16,829 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2019-01-22 09:27:16,833 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2019-01-22 09:27:16,836 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2019-01-22 09:27:16,839 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2019-01-22 09:27:16,843 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2019-01-22 09:27:16,846 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2019-01-22 09:27:16,849 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+INFO  2019-01-22 09:27:18,274 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-01-22 09:27:18,278 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2019-01-22 09:27:18,280 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-01-22 09:27:18,392 [7    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:27:18,439 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 170.3079ms 200 
+INFO  2019-01-22 09:27:18,442 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 170.3126ms 204 
+INFO  2019-01-22 09:27:18,456 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-01-22 09:27:18,469 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:27:23,818 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-01-22 09:27:23,822 [12   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:27:23,907 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.0508ms 204 
+INFO  2019-01-22 09:27:23,918 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-01-22 09:27:23,921 [6    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:27:32,830 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host)
+INFO  2019-01-22 09:27:32,833 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2019-01-22 09:27:32,835 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2019-01-22 09:27:32,859 [6    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:27:32,862 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:27:33,300 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2019-01-22 09:27:33,306 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2019-01-22 09:27:34,682 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host) - Validation state: Valid
+INFO  2019-01-22 09:27:34,693 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 4.1374ms.
+INFO  2019-01-22 09:27:35,104 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1794.6941ms.
+INFO  2019-01-22 09:27:35,106 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1800.7043ms.
+INFO  2019-01-22 09:27:35,206 [7    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-01-22 09:27:35,227 [14   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:27:35,230 [4    ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:27:35,236 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host) in 2385.693ms
+INFO  2019-01-22 09:27:35,277 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17010.671ms 302 
+INFO  2019-01-22 09:27:35,280 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-01-22 09:27:35,337 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 56.8389ms 200 text/html
+INFO  2019-01-22 09:27:35,372 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 2529.4367ms
+INFO  2019-01-22 09:27:35,375 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 2529.4284ms
+INFO  2019-01-22 09:27:35,424 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2019-01-22 09:27:35,428 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 16951.8899ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:27:35,433 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11509.6882ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:27:35,436 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2019-01-22 09:27:35,441 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2019-01-22 09:27:35,524 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-01-22 09:27:35,528 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:27:35,532 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 16.5173ms 204 
+INFO  2019-01-22 09:27:35,644 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-01-22 09:27:35,681 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:27:35,766 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2019-01-22 09:27:35,770 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2019-01-22 09:27:35,772 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2019-01-22 09:27:35,780 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action ServiceTrigger.Sessions.SessionAppService.GetCurrentLoginInformations (ServiceTrigger.Application)
+INFO  2019-01-22 09:27:35,784 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:27:35,791 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 381.5647ms 304 text/css
+INFO  2019-01-22 09:27:35,797 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 357.9638ms 304 application/javascript
+INFO  2019-01-22 09:27:35,800 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 348.0444ms 304 application/javascript
+INFO  2019-01-22 09:27:36,386 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-01-22 09:27:36,563 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Sessions.SessionAppService.GetCurrentLoginInformations (ServiceTrigger.Application) - Validation state: Valid
+INFO  2019-01-22 09:27:36,750 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Sessions.SessionAppService.GetCurrentLoginInformations (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 183.1773ms.
+INFO  2019-01-22 09:27:36,783 [14   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:27:36,814 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Sessions.SessionAppService.GetCurrentLoginInformations (ServiceTrigger.Application) in 1030.0618ms
+INFO  2019-01-22 09:27:36,818 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1177.4577ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:27:36,993 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 600.7991ms 200 application/json;charset=utf-8
+INFO  2019-01-22 09:28:47,744 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Account/IsTenantAvailable  
+INFO  2019-01-22 09:28:47,747 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:28:47,750 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.3136ms 204 
+INFO  2019-01-22 09:28:47,769 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Account/IsTenantAvailable application/json;charset=UTF-8 33
+INFO  2019-01-22 09:28:47,772 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:28:47,807 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "IsTenantAvailable", controller = "Account"}. Executing action ServiceTrigger.Authorization.Accounts.AccountAppService.IsTenantAvailable (ServiceTrigger.Application)
+INFO  2019-01-22 09:28:47,810 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:28:48,230 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Authorization.Accounts.AccountAppService.IsTenantAvailable (ServiceTrigger.Application) with arguments (ServiceTrigger.Authorization.Accounts.Dto.IsTenantAvailableInput) - Validation state: Valid
+INFO  2019-01-22 09:28:48,278 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Authorization.Accounts.AccountAppService.IsTenantAvailable (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 45.7111ms.
+INFO  2019-01-22 09:28:48,320 [50   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:28:48,325 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Authorization.Accounts.AccountAppService.IsTenantAvailable (ServiceTrigger.Application) in 514.959ms
+INFO  2019-01-22 09:28:48,330 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 560.1515ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:28:52,546 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/TokenAuth/Authenticate  
+INFO  2019-01-22 09:28:52,549 [45   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:28:52,552 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.9564ms 204 
+INFO  2019-01-22 09:28:52,569 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json;charset=UTF-8 86
+INFO  2019-01-22 09:28:52,573 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:28:52,587 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ServiceTrigger.Controllers.TokenAuthController.Authenticate (ServiceTrigger.Web.Core)
+INFO  2019-01-22 09:28:52,589 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:28:53,067 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Controllers.TokenAuthController.Authenticate (ServiceTrigger.Web.Core) with arguments (ServiceTrigger.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+WARN  2019-01-22 09:28:54,428 [45   ] Mvc.ExceptionHandling.AbpExceptionFilter - 登录失败!
+Abp.UI.UserFriendlyException: 登录失败!
+   at ServiceTrigger.Controllers.TokenAuthController.GetLoginResultAsync(String usernameOrEmailAddress, String password, String tenancyName) in C:\GitRepository\ServiceTrigger\BE\src\ServiceTrigger.Web.Core\Controllers\TokenAuthController.cs:line 192
+   at ServiceTrigger.Controllers.TokenAuthController.Authenticate(AuthenticateModel model) in C:\GitRepository\ServiceTrigger\BE\src\ServiceTrigger.Web.Core\Controllers\TokenAuthController.cs:line 55
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-01-22 09:28:54,446 [45   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:28:54,452 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Controllers.TokenAuthController.Authenticate (ServiceTrigger.Web.Core) in 1862.0679ms
+INFO  2019-01-22 09:28:54,455 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1885.4157ms 500 application/json; charset=utf-8
+INFO  2019-01-22 09:28:59,664 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/TokenAuth/Authenticate  
+INFO  2019-01-22 09:28:59,667 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:28:59,671 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.5343ms 204 
+INFO  2019-01-22 09:28:59,674 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json;charset=UTF-8 74
+INFO  2019-01-22 09:28:59,677 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:28:59,690 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ServiceTrigger.Controllers.TokenAuthController.Authenticate (ServiceTrigger.Web.Core)
+INFO  2019-01-22 09:28:59,693 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:28:59,734 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Controllers.TokenAuthController.Authenticate (ServiceTrigger.Web.Core) with arguments (ServiceTrigger.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+WARN  2019-01-22 09:28:59,855 [45   ] icrosoft.AspNetCore.Identity.UserManager - Invalid password for user 2.
+WARN  2019-01-22 09:29:01,618 [47   ] Mvc.ExceptionHandling.AbpExceptionFilter - 登录失败!
+Abp.UI.UserFriendlyException: 登录失败!
+   at ServiceTrigger.Controllers.TokenAuthController.GetLoginResultAsync(String usernameOrEmailAddress, String password, String tenancyName) in C:\GitRepository\ServiceTrigger\BE\src\ServiceTrigger.Web.Core\Controllers\TokenAuthController.cs:line 192
+   at ServiceTrigger.Controllers.TokenAuthController.Authenticate(AuthenticateModel model) in C:\GitRepository\ServiceTrigger\BE\src\ServiceTrigger.Web.Core\Controllers\TokenAuthController.cs:line 55
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+INFO  2019-01-22 09:29:01,624 [47   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:01,629 [47   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Controllers.TokenAuthController.Authenticate (ServiceTrigger.Web.Core) in 1934.6505ms
+INFO  2019-01-22 09:29:01,632 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1957.9241ms 500 application/json; charset=utf-8
+INFO  2019-01-22 09:29:06,372 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/TokenAuth/Authenticate  
+INFO  2019-01-22 09:29:06,376 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:06,380 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.7175ms 204 
+INFO  2019-01-22 09:29:06,386 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json;charset=UTF-8 72
+INFO  2019-01-22 09:29:06,388 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:06,396 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action ServiceTrigger.Controllers.TokenAuthController.Authenticate (ServiceTrigger.Web.Core)
+INFO  2019-01-22 09:29:06,400 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:06,435 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Controllers.TokenAuthController.Authenticate (ServiceTrigger.Web.Core) with arguments (ServiceTrigger.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2019-01-22 09:29:07,145 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Controllers.TokenAuthController.Authenticate (ServiceTrigger.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 707.2434ms.
+INFO  2019-01-22 09:29:07,236 [13   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:07,244 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Controllers.TokenAuthController.Authenticate (ServiceTrigger.Web.Core) in 844.5403ms
+INFO  2019-01-22 09:29:07,248 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 861.3285ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:29:08,125 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-01-22 09:29:08,127 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:08,131 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.9466ms 204 
+INFO  2019-01-22 09:29:08,142 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-01-22 09:29:08,147 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:08,216 [9    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:29:08,376 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2019-01-22 09:29:08,379 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:08,417 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2019-01-22 09:29:08,706 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 286.3409ms.
+INFO  2019-01-22 09:29:08,740 [45   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:08,747 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 364.9151ms
+INFO  2019-01-22 09:29:08,751 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 608.4281ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:29:08,826 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-01-22 09:29:08,829 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:08,832 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.4668ms 204 
+INFO  2019-01-22 09:29:08,984 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-01-22 09:29:08,988 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:08,992 [9    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:29:09,000 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action ServiceTrigger.Sessions.SessionAppService.GetCurrentLoginInformations (ServiceTrigger.Application)
+INFO  2019-01-22 09:29:09,003 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:09,036 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Sessions.SessionAppService.GetCurrentLoginInformations (ServiceTrigger.Application) - Validation state: Valid
+INFO  2019-01-22 09:29:09,070 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Sessions.SessionAppService.GetCurrentLoginInformations (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 31.0692ms.
+INFO  2019-01-22 09:29:09,074 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:09,081 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Sessions.SessionAppService.GetCurrentLoginInformations (ServiceTrigger.Application) in 77.3042ms
+INFO  2019-01-22 09:29:09,083 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 101.1025ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:29:15,878 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:29:15,882 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:15,885 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/GetRoles  
+INFO  2019-01-22 09:29:15,889 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.974ms 204 
+INFO  2019-01-22 09:29:15,894 [45   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:15,901 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14.1144ms 204 
+INFO  2019-01-22 09:29:15,931 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:29:15,935 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetRoles  
+INFO  2019-01-22 09:29:15,938 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:15,942 [45   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:15,946 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:29:15,950 [45   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:29:15,961 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetRoles", controller = "User"}. Executing action ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application)
+INFO  2019-01-22 09:29:15,965 [45   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:16,009 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing action ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application)
+INFO  2019-01-22 09:29:16,016 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:16,316 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application) - Validation state: Valid
+INFO  2019-01-22 09:29:16,402 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application) with arguments (ServiceTrigger.Users.Dto.PagedUserResultRequestDto) - Validation state: Valid
+INFO  2019-01-22 09:29:16,405 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 82.8308ms.
+INFO  2019-01-22 09:29:16,428 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:16,442 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application) in 477.9017ms
+INFO  2019-01-22 09:29:16,446 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 515.9017ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:29:16,873 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 466.2975ms.
+INFO  2019-01-22 09:29:16,911 [49   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:16,925 [49   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application) in 912.7557ms
+INFO  2019-01-22 09:29:16,928 [49   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 999.5665ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:29:16,983 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Role/GetAll?keyword=&maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:29:17,002 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:17,006 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Role/getAllPermissions  
+INFO  2019-01-22 09:29:17,010 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 25.5691ms 204 
+INFO  2019-01-22 09:29:17,015 [44   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:17,018 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 34.6911ms 204 
+INFO  2019-01-22 09:29:17,025 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/GetAll?keyword=&maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:29:17,030 [44   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:17,034 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/getAllPermissions  
+INFO  2019-01-22 09:29:17,041 [44   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:29:17,045 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:17,050 [11   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:29:17,061 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Role"}. Executing action ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application)
+INFO  2019-01-22 09:29:17,065 [44   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:17,068 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllPermissions", controller = "Role"}. Executing action ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application)
+INFO  2019-01-22 09:29:17,070 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:17,383 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application) - Validation state: Valid
+INFO  2019-01-22 09:29:17,434 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application) with arguments (ServiceTrigger.Roles.Dto.PagedRoleResultRequestDto) - Validation state: Valid
+INFO  2019-01-22 09:29:17,448 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 61.8649ms.
+INFO  2019-01-22 09:29:17,475 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:17,491 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application) in 417.3667ms
+INFO  2019-01-22 09:29:17,499 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 461.382ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:29:17,585 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 147.6762ms.
+INFO  2019-01-22 09:29:17,611 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:17,618 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application) in 551.4104ms
+INFO  2019-01-22 09:29:17,625 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 598.5565ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:29:20,350 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:29:20,358 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetRoles  
+INFO  2019-01-22 09:29:20,360 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:20,363 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:20,367 [14   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:29:20,371 [13   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:29:20,382 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing action ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application)
+INFO  2019-01-22 09:29:20,386 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:20,389 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetRoles", controller = "User"}. Executing action ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application)
+INFO  2019-01-22 09:29:20,392 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:20,450 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application) with arguments (ServiceTrigger.Users.Dto.PagedUserResultRequestDto) - Validation state: Valid
+INFO  2019-01-22 09:29:20,453 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application) - Validation state: Valid
+INFO  2019-01-22 09:29:20,459 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.6846ms.
+INFO  2019-01-22 09:29:20,476 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 21.3452ms.
+INFO  2019-01-22 09:29:20,496 [13   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:20,504 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application) in 107.2409ms
+INFO  2019-01-22 09:29:20,508 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:20,514 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 160.2637ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:29:20,518 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application) in 131.8539ms
+INFO  2019-01-22 09:29:20,522 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 173.4178ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:29:21,754 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/GetAll?keyword=&maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:29:21,758 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/getAllPermissions  
+INFO  2019-01-22 09:29:21,764 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:21,769 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:21,772 [9    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:29:21,776 [13   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:29:21,785 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Role"}. Executing action ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application)
+INFO  2019-01-22 09:29:21,788 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:21,791 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllPermissions", controller = "Role"}. Executing action ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application)
+INFO  2019-01-22 09:29:21,793 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:21,849 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application) with arguments (ServiceTrigger.Roles.Dto.PagedRoleResultRequestDto) - Validation state: Valid
+INFO  2019-01-22 09:29:21,851 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application) - Validation state: Valid
+INFO  2019-01-22 09:29:21,856 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.1336ms.
+INFO  2019-01-22 09:29:21,870 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 16.3961ms.
+INFO  2019-01-22 09:29:21,879 [13   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:21,884 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application) in 88.374ms
+INFO  2019-01-22 09:29:21,887 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 136.7971ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:29:21,894 [48   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:21,900 [48   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application) in 108.9376ms
+INFO  2019-01-22 09:29:21,904 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 153.6263ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:29:23,139 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:29:23,143 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/GetRoles  
+INFO  2019-01-22 09:29:23,146 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:23,150 [12   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:23,153 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14.9403ms 204 
+INFO  2019-01-22 09:29:23,156 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.2318ms 204 
+INFO  2019-01-22 09:29:23,171 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetRoles  
+INFO  2019-01-22 09:29:23,174 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:29:23,176 [12   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:23,182 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:23,187 [9    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:29:23,190 [12   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:29:23,198 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing action ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application)
+INFO  2019-01-22 09:29:23,201 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:23,205 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetRoles", controller = "User"}. Executing action ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application)
+INFO  2019-01-22 09:29:23,207 [12   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:23,265 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application) with arguments (ServiceTrigger.Users.Dto.PagedUserResultRequestDto) - Validation state: Valid
+INFO  2019-01-22 09:29:23,267 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application) - Validation state: Valid
+INFO  2019-01-22 09:29:23,274 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.1654ms.
+INFO  2019-01-22 09:29:23,287 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 18.8997ms.
+INFO  2019-01-22 09:29:23,310 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:23,314 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application) in 106.014ms
+INFO  2019-01-22 09:29:23,318 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 149.2836ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:29:23,322 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:23,327 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application) in 123.9888ms
+INFO  2019-01-22 09:29:23,330 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 162.5541ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:29:24,695 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Role/GetAll?keyword=&maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:29:24,706 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Role/getAllPermissions  
+INFO  2019-01-22 09:29:24,709 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:24,712 [12   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:24,716 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 21.6152ms 204 
+INFO  2019-01-22 09:29:24,719 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 23.2396ms 204 
+INFO  2019-01-22 09:29:24,724 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/GetAll?keyword=&maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:29:24,733 [12   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:24,737 [44   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/getAllPermissions  
+INFO  2019-01-22 09:29:24,741 [44   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:24,744 [12   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:29:24,748 [44   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:29:24,758 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Role"}. Executing action ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application)
+INFO  2019-01-22 09:29:24,762 [12   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:24,766 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllPermissions", controller = "Role"}. Executing action ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application)
+INFO  2019-01-22 09:29:24,769 [44   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:29:24,834 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application) with arguments (ServiceTrigger.Roles.Dto.PagedRoleResultRequestDto) - Validation state: Valid
+INFO  2019-01-22 09:29:24,837 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application) - Validation state: Valid
+INFO  2019-01-22 09:29:24,842 [44   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.9564ms.
+INFO  2019-01-22 09:29:24,862 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 23.4425ms.
+INFO  2019-01-22 09:29:24,878 [45   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:24,883 [45   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application) in 111.8892ms
+INFO  2019-01-22 09:29:24,888 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 150.4552ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:29:24,892 [13   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:29:24,902 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application) in 133.8613ms
+INFO  2019-01-22 09:29:24,910 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 181.2008ms 200 application/json; charset=utf-8
+DEBUG 2019-01-22 09:30:08,900 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-01-22 09:30:09,108 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2019-01-22 09:30:09,139 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.Web.Host.Startup.ServiceTriggerWebHostModule, ServiceTrigger.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:09,147 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerWebCoreModule, ServiceTrigger.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:09,148 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerApplicationModule, ServiceTrigger.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:09,148 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerCoreModule, ServiceTrigger.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:09,149 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:09,149 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:09,150 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:09,151 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:09,152 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.EntityFrameworkCore.ServiceTriggerEntityFrameworkModule, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:09,153 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:09,153 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:09,154 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:09,154 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:09,155 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:09,155 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:09,162 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2019-01-22 09:30:09,292 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-22 09:30:09,292 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-22 09:30:09,292 [1    ] o.Configuration.LanguageManagementConfig - Converted ServiceTrigger (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-22 09:30:09,292 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-22 09:30:09,820 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ServiceTrigger.EntityFrameworkCore.ServiceTriggerDbContext, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:30:11,113 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-01-22 09:30:11,200 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-01-22 09:30:11,273 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-01-22 09:30:11,319 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ServiceTrigger
+DEBUG 2019-01-22 09:30:11,371 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-01-22 09:30:11,566 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-01-22 09:30:11,640 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2019-01-22 09:30:11,640 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-01-22 09:30:11,651 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.CreateUserDto
+DEBUG 2019-01-22 09:30:11,652 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.UserDto
+DEBUG 2019-01-22 09:30:11,653 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-01-22 09:30:11,653 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-01-22 09:30:11,653 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.CreateRoleDto
+DEBUG 2019-01-22 09:30:11,653 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.PermissionDto
+DEBUG 2019-01-22 09:30:11,653 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.RoleDto
+DEBUG 2019-01-22 09:30:11,655 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Projects.Dtos.ProjectListDto
+DEBUG 2019-01-22 09:30:11,656 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-01-22 09:30:11,656 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.TenantDto
+DEBUG 2019-01-22 09:30:11,656 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Jobs.Dtos.JobListDto
+INFO  2019-01-22 09:30:18,619 [1    ] Hangfire.MySql.Core.MySqlStorage         - DB tables already exist. Exit install
+INFO  2019-01-22 09:30:18,654 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2019-01-22 09:30:18,663 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'Server: localhost@servicetrigger'
+INFO  2019-01-22 09:30:18,666 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2019-01-22 09:30:18,671 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2019-01-22 09:30:18,674 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2019-01-22 09:30:18,676 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2019-01-22 09:30:18,679 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2019-01-22 09:30:18,682 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2019-01-22 09:30:18,684 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+INFO  2019-01-22 09:30:19,892 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2019-01-22 09:30:19,895 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:21021/  0
+INFO  2019-01-22 09:30:20,039 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 151.2807ms 200 
+INFO  2019-01-22 09:30:34,662 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host)
+INFO  2019-01-22 09:30:36,295 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host) - Validation state: Valid
+INFO  2019-01-22 09:30:36,304 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 3.3475ms.
+INFO  2019-01-22 09:30:36,664 [13   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-01-22 09:30:36,684 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Web.Host.Controllers.HomeController.Index (ServiceTrigger.Web.Host) in 2013.1122ms
+INFO  2019-01-22 09:30:36,700 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2019-01-22 09:30:36,708 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 16825.6971ms 302 
+INFO  2019-01-22 09:30:36,760 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 59.7632ms 200 text/html
+INFO  2019-01-22 09:30:36,818 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2019-01-22 09:30:36,822 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2019-01-22 09:30:36,825 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2019-01-22 09:30:36,860 [6    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2019-01-22 09:30:36,862 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2019-01-22 09:30:36,865 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2019-01-22 09:30:36,874 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 48.7882ms 304 application/javascript
+INFO  2019-01-22 09:30:36,877 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 55.3763ms 304 text/css
+INFO  2019-01-22 09:30:36,880 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 55.3763ms 304 application/javascript
+INFO  2019-01-22 09:30:37,397 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2019-01-22 09:30:37,825 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 427.8028ms 200 application/json;charset=utf-8
+INFO  2019-01-22 09:31:12,228 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:21021/api/services/app/Job/UpdateJobStatus application/json-patch+json 33
+INFO  2019-01-22 09:31:12,294 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "UpdateJobStatus", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.UpdateJobStatus (ServiceTrigger.Application)
+INFO  2019-01-22 09:31:13,565 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.UpdateJobStatus (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.UpdateJobStatusInput) - Validation state: Valid
+INFO  2019-01-22 09:31:13,756 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Jobs.JobAppService.UpdateJobStatus (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.EmptyResult in 187.9034ms.
+INFO  2019-01-22 09:31:13,911 [7    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:31:13,948 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.UpdateJobStatus (ServiceTrigger.Application) in 1651.151ms
+INFO  2019-01-22 09:31:13,965 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1737.3467ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:32:34,788 [46   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/Job/UpdateJobStatus application/json 36
+INFO  2019-01-22 09:32:35,003 [46   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 193.4114ms 404 
+INFO  2019-01-22 09:32:35,015 [46   ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLK014LRB14Q", Request id "0HLK014LRB14Q:00000001": the application completed without reading the entire request body.
+INFO  2019-01-22 09:32:40,058 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:21021/api/services/app/Job/UpdateJobStatus application/json 36
+INFO  2019-01-22 09:32:40,069 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "UpdateJobStatus", controller = "Job"}. Executing action ServiceTrigger.Jobs.JobAppService.UpdateJobStatus (ServiceTrigger.Application)
+INFO  2019-01-22 09:32:40,111 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Jobs.JobAppService.UpdateJobStatus (ServiceTrigger.Application) with arguments (ServiceTrigger.Jobs.Dtos.UpdateJobStatusInput) - Validation state: Valid
+INFO  2019-01-22 09:32:40,122 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Jobs.JobAppService.UpdateJobStatus (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.EmptyResult in 7.6254ms.
+INFO  2019-01-22 09:32:40,211 [51   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:32:40,215 [51   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Jobs.JobAppService.UpdateJobStatus (ServiceTrigger.Application) in 142.0888ms
+INFO  2019-01-22 09:32:40,218 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 160.6261ms 200 application/json; charset=utf-8
+DEBUG 2019-01-22 09:35:22,459 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-01-22 09:35:22,492 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2019-01-22 09:35:22,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.Web.Host.Startup.ServiceTriggerWebHostModule, ServiceTrigger.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:22,520 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerWebCoreModule, ServiceTrigger.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:22,521 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerApplicationModule, ServiceTrigger.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:22,521 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.ServiceTriggerCoreModule, ServiceTrigger.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:22,522 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:22,522 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:22,522 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:22,523 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:22,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ServiceTrigger.EntityFrameworkCore.ServiceTriggerEntityFrameworkModule, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:22,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:22,525 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:22,525 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:22,525 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:22,526 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:22,526 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:22,531 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2019-01-22 09:35:22,618 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-22 09:35:22,618 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-22 09:35:22,618 [1    ] o.Configuration.LanguageManagementConfig - Converted ServiceTrigger (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-22 09:35:22,618 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-01-22 09:35:23,015 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ServiceTrigger.EntityFrameworkCore.ServiceTriggerDbContext, ServiceTrigger.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-01-22 09:35:23,599 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-01-22 09:35:23,679 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-01-22 09:35:23,748 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-01-22 09:35:23,792 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ServiceTrigger
+DEBUG 2019-01-22 09:35:23,840 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-01-22 09:35:23,888 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-01-22 09:35:23,956 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2019-01-22 09:35:23,956 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-01-22 09:35:23,967 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.CreateUserDto
+DEBUG 2019-01-22 09:35:23,968 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Users.Dto.UserDto
+DEBUG 2019-01-22 09:35:23,968 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-01-22 09:35:23,968 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-01-22 09:35:23,969 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.CreateRoleDto
+DEBUG 2019-01-22 09:35:23,969 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.PermissionDto
+DEBUG 2019-01-22 09:35:23,969 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Roles.Dto.RoleDto
+DEBUG 2019-01-22 09:35:23,970 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Projects.Dtos.ProjectListDto
+DEBUG 2019-01-22 09:35:23,970 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-01-22 09:35:23,970 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.MultiTenancy.Dto.TenantDto
+DEBUG 2019-01-22 09:35:23,970 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ServiceTrigger.Jobs.Dtos.JobListDto
+INFO  2019-01-22 09:35:29,271 [1    ] Hangfire.MySql.Core.MySqlStorage         - DB tables already exist. Exit install
+INFO  2019-01-22 09:35:29,298 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2019-01-22 09:35:29,303 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'Server: localhost@servicetrigger'
+INFO  2019-01-22 09:35:29,304 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2019-01-22 09:35:29,304 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2019-01-22 09:35:29,304 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2019-01-22 09:35:29,304 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2019-01-22 09:35:29,305 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2019-01-22 09:35:29,305 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2019-01-22 09:35:29,305 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+INFO  2019-01-22 09:35:29,527 [chdog] Hangfire.Server.ServerWatchdog           - 1 servers were removed due to timeout
+INFO  2019-01-22 09:35:29,974 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-01-22 09:35:29,974 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-01-22 09:35:30,057 [6    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:35:30,057 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:35:30,136 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 166.9608ms 204 
+INFO  2019-01-22 09:35:30,136 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 166.9241ms 204 
+INFO  2019-01-22 09:35:30,145 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-01-22 09:35:30,145 [7    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:35:30,368 [7    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:35:30,715 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2019-01-22 09:35:30,715 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:35:30,717 [9    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:35:32,327 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2019-01-22 09:35:32,327 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)
+INFO  2019-01-22 09:35:32,354 [7    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:35:32,354 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:35:32,456 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2019-01-22 09:35:32,456 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) - Validation state: Valid
+INFO  2019-01-22 09:35:33,505 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1045.1802ms.
+INFO  2019-01-22 09:35:33,505 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1045.0266ms.
+INFO  2019-01-22 09:35:33,942 [6    ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:35:33,942 [7    ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:35:34,064 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 1728.7872ms
+INFO  2019-01-22 09:35:34,064 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 1728.749ms
+INFO  2019-01-22 09:35:34,089 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3944.1211ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:35:34,089 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3373.5338ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:35:34,163 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-01-22 09:35:34,164 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:35:34,164 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.3588ms 204 
+INFO  2019-01-22 09:35:34,305 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-01-22 09:35:34,306 [7    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:35:34,306 [7    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:35:34,333 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action ServiceTrigger.Sessions.SessionAppService.GetCurrentLoginInformations (ServiceTrigger.Application)
+INFO  2019-01-22 09:35:34,333 [7    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:35:34,520 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Sessions.SessionAppService.GetCurrentLoginInformations (ServiceTrigger.Application) - Validation state: Valid
+INFO  2019-01-22 09:35:34,598 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Sessions.SessionAppService.GetCurrentLoginInformations (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 78.0748ms.
+INFO  2019-01-22 09:35:34,624 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:35:34,658 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Sessions.SessionAppService.GetCurrentLoginInformations (ServiceTrigger.Application) in 325.3795ms
+INFO  2019-01-22 09:35:34,659 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 353.1225ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:35:50,279 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Role/GetAll?keyword=&maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:35:50,279 [7    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:35:50,279 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.4934ms 204 
+INFO  2019-01-22 09:35:50,280 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Role/getAllPermissions  
+INFO  2019-01-22 09:35:50,280 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:35:50,280 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.2348ms 204 
+INFO  2019-01-22 09:35:50,316 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/GetAll?keyword=&maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:35:50,316 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:35:50,317 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/getAllPermissions  
+INFO  2019-01-22 09:35:50,317 [6    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:35:50,317 [14   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:35:50,317 [6    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:35:50,331 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllPermissions", controller = "Role"}. Executing action ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application)
+INFO  2019-01-22 09:35:50,332 [6    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:35:50,392 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Role"}. Executing action ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application)
+INFO  2019-01-22 09:35:50,392 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:35:50,440 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application) - Validation state: Valid
+INFO  2019-01-22 09:35:50,459 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 18.936ms.
+INFO  2019-01-22 09:35:50,496 [5    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:35:50,506 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application) in 174.5855ms
+INFO  2019-01-22 09:35:50,506 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 189.8428ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:35:50,602 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application) with arguments (ServiceTrigger.Roles.Dto.PagedRoleResultRequestDto) - Validation state: Valid
+INFO  2019-01-22 09:35:50,980 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 378.0036ms.
+INFO  2019-01-22 09:35:51,002 [5    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:35:51,016 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application) in 623.6049ms
+INFO  2019-01-22 09:35:51,016 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 700.0395ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:40:29,568 [chdog] Hangfire.Server.ServerWatchdog           - 1 servers were removed due to timeout
+INFO  2019-01-22 09:42:29,191 [58   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:42:29,192 [58   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:42:29,192 [58   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.354ms 204 
+INFO  2019-01-22 09:42:29,192 [61   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/GetRoles  
+INFO  2019-01-22 09:42:29,192 [61   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:42:29,192 [61   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.2751ms 204 
+INFO  2019-01-22 09:42:29,223 [61   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:42:29,223 [58   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetRoles  
+INFO  2019-01-22 09:42:29,224 [61   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:42:29,224 [58   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:42:29,224 [58   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:42:29,225 [61   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:42:29,243 [58   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetRoles", controller = "User"}. Executing action ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application)
+INFO  2019-01-22 09:42:29,244 [58   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:42:29,247 [61   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing action ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application)
+INFO  2019-01-22 09:42:29,247 [61   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:42:29,337 [58   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application) - Validation state: Valid
+INFO  2019-01-22 09:42:29,351 [61   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application) with arguments (ServiceTrigger.Users.Dto.PagedUserResultRequestDto) - Validation state: Valid
+INFO  2019-01-22 09:42:29,372 [51   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 34.4866ms.
+INFO  2019-01-22 09:42:29,418 [50   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:42:29,420 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application) in 176.26ms
+INFO  2019-01-22 09:42:29,420 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 196.8774ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:42:29,509 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 157.6047ms.
+INFO  2019-01-22 09:42:29,533 [50   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:42:29,546 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application) in 298.3959ms
+INFO  2019-01-22 09:42:29,546 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 323.2221ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:46:47,775 [71   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Role/GetAll?keyword=&maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:46:47,775 [71   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:47,775 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Role/getAllPermissions  
+INFO  2019-01-22 09:46:47,775 [71   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.4156ms 204 
+INFO  2019-01-22 09:46:47,775 [72   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:47,776 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.2111ms 204 
+INFO  2019-01-22 09:46:47,805 [65   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/getAllPermissions  
+INFO  2019-01-22 09:46:47,806 [65   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:47,807 [65   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:46:47,807 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/GetAll?keyword=&maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:46:47,807 [72   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:47,808 [72   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:46:47,816 [65   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllPermissions", controller = "Role"}. Executing action ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application)
+INFO  2019-01-22 09:46:47,816 [65   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:47,818 [72   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Role"}. Executing action ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application)
+INFO  2019-01-22 09:46:47,818 [72   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:47,820 [65   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application) - Validation state: Valid
+INFO  2019-01-22 09:46:47,823 [65   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.28ms.
+INFO  2019-01-22 09:46:47,824 [72   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application) with arguments (ServiceTrigger.Roles.Dto.PagedRoleResultRequestDto) - Validation state: Valid
+INFO  2019-01-22 09:46:47,833 [74   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.8792ms.
+INFO  2019-01-22 09:46:47,855 [50   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:46:47,855 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application) in 38.8297ms
+INFO  2019-01-22 09:46:47,855 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 49.802ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:46:47,859 [74   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:46:47,859 [74   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application) in 40.5086ms
+INFO  2019-01-22 09:46:47,859 [74   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 51.9001ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:46:50,698 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:46:50,698 [72   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:50,699 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.3469ms 204 
+INFO  2019-01-22 09:46:50,699 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/GetRoles  
+INFO  2019-01-22 09:46:50,699 [66   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:50,699 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.2025ms 204 
+INFO  2019-01-22 09:46:50,745 [70   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetRoles  
+INFO  2019-01-22 09:46:50,746 [70   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:50,747 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:46:50,747 [70   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:46:50,747 [66   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:50,747 [66   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:46:50,754 [70   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetRoles", controller = "User"}. Executing action ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application)
+INFO  2019-01-22 09:46:50,754 [70   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:50,757 [66   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing action ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application)
+INFO  2019-01-22 09:46:50,757 [66   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:50,758 [70   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application) - Validation state: Valid
+INFO  2019-01-22 09:46:50,760 [66   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application) with arguments (ServiceTrigger.Users.Dto.PagedUserResultRequestDto) - Validation state: Valid
+INFO  2019-01-22 09:46:50,761 [74   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.1671ms.
+INFO  2019-01-22 09:46:50,770 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9.0797ms.
+INFO  2019-01-22 09:46:50,801 [74   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:46:50,801 [74   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Users.UserAppService.GetRoles (ServiceTrigger.Application) in 46.7971ms
+INFO  2019-01-22 09:46:50,801 [74   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 55.7371ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:46:50,811 [50   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:46:50,811 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Users.UserAppService.GetAll (ServiceTrigger.Application) in 53.8372ms
+INFO  2019-01-22 09:46:50,811 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 64.4664ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:46:52,022 [71   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/getAllPermissions  
+INFO  2019-01-22 09:46:52,022 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/GetAll?keyword=&maxResultCount=10&skipCount=0  
+INFO  2019-01-22 09:46:52,022 [66   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:52,022 [71   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:52,023 [71   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:46:52,023 [66   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-01-22 09:46:52,029 [71   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAllPermissions", controller = "Role"}. Executing action ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application)
+INFO  2019-01-22 09:46:52,029 [71   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:52,030 [66   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Role"}. Executing action ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application)
+INFO  2019-01-22 09:46:52,030 [66   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-01-22 09:46:52,032 [71   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application) - Validation state: Valid
+INFO  2019-01-22 09:46:52,032 [66   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application) with arguments (ServiceTrigger.Roles.Dto.PagedRoleResultRequestDto) - Validation state: Valid
+INFO  2019-01-22 09:46:52,034 [71   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.8683ms.
+INFO  2019-01-22 09:46:52,043 [74   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 10.2565ms.
+INFO  2019-01-22 09:46:52,060 [50   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:46:52,061 [50   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Roles.RoleAppService.GetAllPermissions (ServiceTrigger.Application) in 31.0909ms
+INFO  2019-01-22 09:46:52,061 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 38.7235ms 200 application/json; charset=utf-8
+INFO  2019-01-22 09:46:52,064 [74   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-01-22 09:46:52,064 [74   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action ServiceTrigger.Roles.RoleAppService.GetAll (ServiceTrigger.Application) in 34.4258ms
+INFO  2019-01-22 09:46:52,064 [74   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 42.3486ms 200 application/json; charset=utf-8

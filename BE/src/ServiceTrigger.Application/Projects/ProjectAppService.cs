@@ -42,7 +42,7 @@ namespace ServiceTrigger.Jobs
         protected virtual async Task CreateProjectAsync(ProjectEditDto input)
         {
             //TODO:新增前的逻辑判断，是否允许新增
-            var entity = input.MapTo<Project>();
+            var entity = ObjectMapper.Map<Project>(input);
 
             await _projectRepository.InsertAsync(entity);
         }
@@ -54,7 +54,8 @@ namespace ServiceTrigger.Jobs
         {
             //TODO:更新前的逻辑判断，是否允许更新
             var entity = await _projectRepository.GetAsync(input.Id.Value);
-            input.MapTo(entity);
+
+            entity = ObjectMapper.Map<Project>(input);
 
             // ObjectMapper.Map(input, entity);
             await _projectRepository.UpdateAsync(entity);
@@ -77,7 +78,7 @@ namespace ServiceTrigger.Jobs
         {
             var entity = await _projectRepository.GetAsync(input.Id);
 
-            return entity.MapTo<ProjectListDto>();
+            return ObjectMapper.Map<ProjectListDto>(entity);
         }
 
         public async Task<PagedResultDto<ProjectListDto>> GetPagedProjectAsync(GetProjectInput input)
@@ -88,7 +89,7 @@ namespace ServiceTrigger.Jobs
 
             var jobs = await query.OrderBy(input.Sorting).PageBy(input).ToListAsync();
 
-            var dtos = jobs.MapTo<List<ProjectListDto>>();
+            var dtos = ObjectMapper.Map<List<ProjectListDto>>(jobs);
 
             return new PagedResultDto<ProjectListDto>(jobsCount, dtos);
         }

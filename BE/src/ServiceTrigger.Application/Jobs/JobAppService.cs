@@ -1,8 +1,10 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
+using Abp.BackgroundJobs;
 using Abp.Domain.Repositories;
 using Abp.Linq.Extensions;
+using Abp.Threading.BackgroundWorkers;
 using Microsoft.EntityFrameworkCore;
 using ServiceTrigger.Jobs.Dtos;
 using System;
@@ -16,10 +18,12 @@ namespace ServiceTrigger.Jobs
     public class JobAppService : ServiceTriggerAppServiceBase, IJobAppService
     {
         private readonly IRepository<Job,int> _jobRepository;
+        private readonly IBackgroundWorkerManager _backgroundWorkerManager;
 
-        public JobAppService(IRepository<Job, int> JobRepository)
+        public JobAppService(IRepository<Job, int> jobRepository, IBackgroundWorkerManager backgroundWorkerManager)
         {
-            _jobRepository = JobRepository;
+            _jobRepository = jobRepository;
+            _backgroundWorkerManager = backgroundWorkerManager;
         }
 
         public async Task CreateOrUpdateJobAsync(CreateOrUpdateJobInput input)
@@ -37,9 +41,11 @@ namespace ServiceTrigger.Jobs
         protected virtual async Task CreateJobAsync(JobEditDto input)
         {
             //TODO:新增前的逻辑判断，是否允许新增
-            var entity = input.MapTo<Job>();
+            var entity = ObjectMapper.Map<Job>(input); 
 
             await _jobRepository.InsertAsync(entity);
+
+            _backgroundWorkerManager.Add(new IBackgroundWorker() {  })
         }
 
         /// <summary>
@@ -49,7 +55,8 @@ namespace ServiceTrigger.Jobs
         {
             //TODO:更新前的逻辑判断，是否允许更新
             var entity = await _jobRepository.GetAsync(input.Id.Value);
-            input.MapTo(entity);
+
+            entity = ObjectMapper.Map(input, entity);
 
             // ObjectMapper.Map(input, entity);
             await _jobRepository.UpdateAsync(entity);
@@ -66,7 +73,7 @@ namespace ServiceTrigger.Jobs
         {
             var entity = await _jobRepository.GetAsync(input.Id);
 
-            return entity.MapTo<JobListDto>();
+            return ObjectMapper.Map<JobListDto>(input);
         }
 
         public async Task<PagedResultDto<JobListDto>> GetPagedJobAsync(GetJobInput input)
@@ -77,9 +84,20 @@ namespace ServiceTrigger.Jobs
 
             var jobs = await query.OrderBy(input.Sorting).PageBy(input).ToListAsync();
 
-            var dtos = jobs.MapTo<List<JobListDto>>();
+            var dtos = ObjectMapper.Map<List<JobListDto>> (jobs);
 
             return new PagedResultDto<JobListDto>(jobsCount, dtos);
+        }
+
+        public async Task UpdateJobStatus(UpdateJobStatusInput input)
+        {
+            var job = await _jobRepository.GetAsync(input.Id);
+
+            if (job != null)
+            {
+                job.IsEnable = input.IsEnable;
+                await _jobRepository.UpdateAsync(job);
+            }
         }
     }
 }

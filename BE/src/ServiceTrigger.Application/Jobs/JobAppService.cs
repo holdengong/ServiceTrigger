@@ -44,8 +44,6 @@ namespace ServiceTrigger.Jobs
             var entity = ObjectMapper.Map<Job>(input); 
 
             await _jobRepository.InsertAsync(entity);
-
-            _backgroundWorkerManager.Add(new IBackgroundWorker() {  })
         }
 
         /// <summary>

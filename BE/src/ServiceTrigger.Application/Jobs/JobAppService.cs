@@ -1,16 +1,16 @@
-﻿using Abp.Application.Services;
-using Abp.Application.Services.Dto;
-using Abp.AutoMapper;
-using Abp.BackgroundJobs;
+﻿using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
 using Abp.Linq.Extensions;
 using Abp.Threading.BackgroundWorkers;
+using Abp.UI;
+using Hangfire;
 using Microsoft.EntityFrameworkCore;
 using ServiceTrigger.Jobs.Dtos;
+using ServiceTrigger.Projects;
 using System;
 using System.Collections.Generic;
 using System.Linq.Dynamic.Core;
-using System.Text;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace ServiceTrigger.Jobs
@@ -18,32 +18,74 @@ namespace ServiceTrigger.Jobs
     public class JobAppService : ServiceTriggerAppServiceBase, IJobAppService
     {
         private readonly IRepository<Job,int> _jobRepository;
+        private readonly IRepository<Project, int> _projectRepository;
         private readonly IBackgroundWorkerManager _backgroundWorkerManager;
 
-        public JobAppService(IRepository<Job, int> jobRepository, IBackgroundWorkerManager backgroundWorkerManager)
+        public JobAppService(IRepository<Job, int> jobRepository,IRepository<Project,int> projectRepository, IBackgroundWorkerManager backgroundWorkerManager)
         {
             _jobRepository = jobRepository;
+            _projectRepository = projectRepository;
             _backgroundWorkerManager = backgroundWorkerManager;
         }
 
         public async Task CreateOrUpdateJobAsync(CreateOrUpdateJobInput input)
         {
+            var project = await _projectRepository.GetAsync(input.Job.ProjectId);
+
+            if (project == null)
+            {
+                throw new UserFriendlyException("项目不存在");
+            }
+
+            var projectHost = project.Host;
+
+            var jobId = input.Job.Id;
+
             if (input.Job.Id.HasValue && input.Job.Id > 0)
             {
                 await UpdateJobAsync(input.Job);
             }
             else
             {
-                await CreateJobAsync(input.Job);
+                jobId = await CreateJobAsync(input.Job);
             }
+
+            SendRequestJobArgs args = new SendRequestJobArgs()
+            {
+                Host = projectHost,
+                ApiUrl = input.Job.ApiUrl
+            };
+
+            string cron = Cron.Daily();
+            switch (input.Job.Frequency)
+            {
+                case FrequencyEnum.Minutely:
+                    cron = Cron.Minutely();
+                    break;
+                case FrequencyEnum.Hourly:
+                    cron = Cron.Hourly();
+                    break;
+                case FrequencyEnum.Daily:
+                    cron = Cron.Daily();
+                    break;
+                case FrequencyEnum.Monthly:
+                    cron = Cron.Monthly();
+                    break;
+                default:
+                    break;
+            }
+
+            RecurringJob.AddOrUpdate<SendRequestJob>(jobId.ToString(), e => e.Execute(args), cron);
         }
 
-        protected virtual async Task CreateJobAsync(JobEditDto input)
+        protected virtual async Task<int> CreateJobAsync(JobEditDto input)
         {
             //TODO:新增前的逻辑判断，是否允许新增
             var entity = ObjectMapper.Map<Job>(input); 
 
-            await _jobRepository.InsertAsync(entity);
+            var jobId = await _jobRepository.InsertAndGetIdAsync(entity);
+
+            return jobId;
         }
 
         /// <summary>
@@ -71,7 +113,7 @@ namespace ServiceTrigger.Jobs
         {
             var entity = await _jobRepository.GetAsync(input.Id);
 
-            return ObjectMapper.Map<JobListDto>(input);
+            return ObjectMapper.Map<JobListDto>(entity);
         }
 
         public async Task<PagedResultDto<JobListDto>> GetPagedJobAsync(GetJobInput input)

@@ -118,6 +118,14 @@
     <text name="Dashboard">仪表盘</text>
   
     <text name="FieldIsRequired">必填</text>
+  
+    <text name="Cron">Cron表达式</text>
+    <text name="CreatedAt">创建时间</text>
+    <text name="LastExecution">上次执行时间</text>
+    <text name="NextExecution">下次执行时间</text>
+
+    <text name="Trigger">现在触发</text>
+    <text name="TriggerSuccess">触发成功</text>
   </texts>
 </localizationDictionary>
 

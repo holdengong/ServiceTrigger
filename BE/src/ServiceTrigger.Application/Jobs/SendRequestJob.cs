@@ -17,7 +17,7 @@ namespace ServiceTrigger.Jobs
 
         public override void Execute(SendRequestJobArgs args)
         {
-            var url = args.Host.Trim('/') + "/" + args.ApiUrl;
+            var url = args.Host.Trim('/') + "/" + args.ApiUrl.Trim('/');
             var request = (HttpWebRequest)WebRequest.Create(url);
             var result = request.GetResponse();
         }

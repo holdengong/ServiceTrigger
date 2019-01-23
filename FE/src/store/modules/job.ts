@@ -35,6 +35,9 @@ class JobModule extends ListModule<JobState,any,Job>{
         async delete(context:ActionContext<JobState,any>,payload:any){
             await Ajax.delete('/api/services/app/Job/Delete?Id='+payload.data.id);
         },
+        async trigger(context:ActionContext<JobState,any>,payload:any){
+            await Ajax.post('/api/services/app/Job/Trigger', payload.data);
+        },
         async get(context:ActionContext<JobState,any>,payload:any){
             let reponse=await Ajax.get('/api/services/app/Job/Get?Id='+payload.id);
             return reponse.data.result as Job;

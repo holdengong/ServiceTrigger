@@ -18,6 +18,7 @@ using ServiceTrigger.Identity;
 using Abp.AspNetCore.SignalR.Hubs;
 using Hangfire;
 using Hangfire.MySql.Core;
+using Hangfire.Dashboard;
 
 namespace ServiceTrigger.Web.Host.Startup
 {

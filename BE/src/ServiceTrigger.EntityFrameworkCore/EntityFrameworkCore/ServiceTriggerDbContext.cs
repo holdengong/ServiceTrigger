@@ -5,6 +5,7 @@ using ServiceTrigger.Authorization.Users;
 using ServiceTrigger.MultiTenancy;
 using ServiceTrigger.Jobs;
 using ServiceTrigger.Projects;
+using ServiceTrigger.Hangfire;
 
 namespace ServiceTrigger.EntityFrameworkCore
 {
@@ -13,6 +14,8 @@ namespace ServiceTrigger.EntityFrameworkCore
         /* Define a DbSet for each entity of the application */
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Project> Projects { get; set; }
+        public DbSet<Hash> Hash { get; set; }
+
         public ServiceTriggerDbContext(DbContextOptions<ServiceTriggerDbContext> options)
             : base(options)
         {

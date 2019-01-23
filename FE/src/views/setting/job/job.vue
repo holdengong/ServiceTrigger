@@ -5,6 +5,7 @@
                 <Form ref="queryForm" :label-width="80" label-position="left" inline>
                     <Row>
                         <Button @click="create" icon="android-add" type="primary" size="large">{{L('Add')}}</Button>
+                        <Button @click="openDashboard" icon="android-add" type="primary" class="toolbar-btn" size="large">{{L('Dashboard')}}</Button>
                     </Row>
                 </Form>
                 <div class="margin-top-10">
@@ -20,11 +21,12 @@
 </template>
 <script lang="ts">
     import { Component, Vue,Inject, Prop,Watch } from 'vue-property-decorator';
-    import Util from '@/lib/util'
+    import Url from '@/lib/url'
     import AbpBase from '@/lib/abpbase'
     import PageRequest from '@/store/entities/page-request'
     import CreateJob from './create-job.vue'
     import EditJob from './edit-job.vue'
+    import Util from '@/lib/util';
     class  PageJobRequest extends PageRequest{
         keyword:string;
         isActive:boolean=null;//nullable
@@ -54,6 +56,11 @@
         create(){
             this.createModalShow=true;
         }
+
+        openDashboard(){
+             window.open(Url+"hangfire","_blank");
+        }
+
         isActiveChange(val:string){
             console.log(val);
             if(val==='Actived'){
@@ -113,9 +120,25 @@
             key:'apiUrl'
         },
         {
+            title:this.L('Cron'),
+            key:'cron'
+        },
+          {
+            title:this.L('CreatedAt'),
+            key:'createdAt'
+        },
+          {
+            title:this.L('LastExecution'),
+            key:'lastExecution'
+        },
+          {
+            title:this.L('NextExecution'),
+            key:'nextExecution'
+        },
+        {
             title:this.L('Actions'),
             key:'Actions',
-            width:150,
+            width:200,
             render:(h:any,params:any)=>{
                 return h('div',[
                     h('Button',{
@@ -133,6 +156,29 @@
                             }
                         }
                     },this.L('Edit')),
+                    h('Button',{
+                        props:{
+                            type:'primary',
+                            size:'small'
+                        },
+                        style:{
+                            marginRight:'5px'
+                        },
+                        on:{
+                            click:async()=>{
+                                await this.$store.dispatch({
+                                                type:'job/trigger',
+                                                data:params.row
+                                            });
+
+                                 this.$Notice.success({
+                                    title: this.L('TriggerSuccess')
+                                });
+
+                                await this.getpage();
+                            }
+                        }
+                    },this.L('Trigger')),
                     h('Button',{
                         props:{
                             type:'error',

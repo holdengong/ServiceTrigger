@@ -15,5 +15,16 @@ namespace ServiceTrigger.Jobs.Dtos
         public int ProjectId { get; set; }
         public string ProjectName { get; set; }
         public string ApiUrl { get; set; }
+        
+        //hangfire hash表字段
+        public string Job { get; set; }
+        public string Cron { get; set; }
+        public string TimeZoneId { get; set; }
+        public string Queue { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime LastExecution { get; set; }
+        public int LastJobId { get; set; }
+        public DateTime NextExecution { get; set; }
+
     }
 }

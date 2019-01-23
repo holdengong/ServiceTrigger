@@ -49,5 +49,12 @@ namespace ServiceTrigger.Jobs
         /// <param name="input"></param>
         /// <returns></returns>
         Task UpdateStatus(UpdateJobStatusInput input);
+
+        /// <summary>
+        /// 现在触发定时任务
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        void Trigger(EntityDto<int> entity);
     }
 }

@@ -5,10 +5,12 @@ using Abp.Threading.BackgroundWorkers;
 using Abp.UI;
 using Hangfire;
 using Microsoft.EntityFrameworkCore;
+using ServiceTrigger.Hangfire;
 using ServiceTrigger.Jobs.Dtos;
 using ServiceTrigger.Projects;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Net;
 using System.Threading.Tasks;
@@ -19,13 +21,20 @@ namespace ServiceTrigger.Jobs
     {
         private readonly IRepository<Job,int> _jobRepository;
         private readonly IRepository<Project, int> _projectRepository;
+        private readonly IRepository<Hash, int> _hashRepository;
+
         private readonly IBackgroundWorkerManager _backgroundWorkerManager;
 
-        public JobAppService(IRepository<Job, int> jobRepository,IRepository<Project,int> projectRepository, IBackgroundWorkerManager backgroundWorkerManager)
+        public JobAppService(IRepository<Job, int> jobRepository
+            ,IRepository<Project,int> projectRepository
+            , IBackgroundWorkerManager backgroundWorkerManager
+            , IRepository<Hash, int> hashRepository
+            )
         {
             _jobRepository = jobRepository;
             _projectRepository = projectRepository;
             _backgroundWorkerManager = backgroundWorkerManager;
+            _hashRepository = hashRepository;
         }
 
         public async Task Create(JobEditDto input)
@@ -42,6 +51,8 @@ namespace ServiceTrigger.Jobs
 
             entity.Project = project;
             entity.Id = await _jobRepository.InsertAndGetIdAsync(entity);
+
+            TestApiConnection(project.Host, entity.ApiUrl);
 
             RegisterJobInHangfire(entity);
         }
@@ -66,6 +77,8 @@ namespace ServiceTrigger.Jobs
             entity.Project = project;
 
             await _jobRepository.UpdateAsync(entity);
+
+            TestApiConnection(project.Host, entity.ApiUrl);
 
             RegisterJobInHangfire(entity);
         }
@@ -94,8 +107,45 @@ namespace ServiceTrigger.Jobs
 
             var dtos = new List<JobListDto>();
 
-            jobs.ForEach(j=> {
+            var hashtest = _hashRepository.GetAllList();
+
+            jobs.ForEach(j => {
                 var dto = ObjectMapper.Map<JobListDto>(j);
+
+                var hashsQuery = _hashRepository.GetAll();
+
+                hashsQuery = hashsQuery.Where(h => h.Key == $"{AppConsts.RecurringJobPrefix}:{j.Id}");
+
+                var hashs = hashsQuery.ToList();
+
+                if (hashs != null)
+                {
+                    dto.Job = hashs.SingleOrDefault(e => e.Field == "Job")?.Value;
+                    dto.Cron = hashs.SingleOrDefault(e => e.Field == "Cron")?.Value;
+                    dto.TimeZoneId = hashs.SingleOrDefault(e => e.Field == "TimeZoneId")?.Value;
+                    dto.Queue = hashs.SingleOrDefault(e => e.Field == "Queue")?.Value;
+
+                    if (hashs.SingleOrDefault(e => e.Field == "CreatedAt") != null)
+                    {
+                        dto.CreatedAt = DateTime.Parse(hashs.SingleOrDefault(e => e.Field == "CreatedAt").Value);
+                    }
+
+                    if (hashs.SingleOrDefault(e => e.Field == "LastExecution") != null)
+                    {
+                        dto.LastExecution = DateTime.Parse(hashs.SingleOrDefault(e => e.Field == "LastExecution").Value);
+                    }
+
+                    if (hashs.SingleOrDefault(e => e.Field == "LastJobId") != null)
+                    {
+                        dto.LastJobId = int.Parse(hashs.SingleOrDefault(e => e.Field == "LastJobId").Value);
+                    }
+
+                    if (hashs.SingleOrDefault(e => e.Field == "NextExecution") != null)
+                    {
+                        dto.NextExecution = DateTime.Parse(hashs.SingleOrDefault(e => e.Field == "NextExecution").Value);
+                    }
+                }
+
                 dto.ProjectName = j.Project.ProjectName;
                 dtos.Add(dto);
             });
@@ -111,6 +161,26 @@ namespace ServiceTrigger.Jobs
             {
                 job.IsEnable = input.IsEnable;
                 await _jobRepository.UpdateAsync(job);
+            }
+        }
+
+        public void Trigger(EntityDto<int> entity)
+        {
+            RecurringJob.Trigger(entity.Id.ToString());
+        }
+
+        public void TestApiConnection(string host,string apiUrl)
+        {
+            var url = host.Trim('/') + "/" + apiUrl.Trim('/');
+            var request = (HttpWebRequest)WebRequest.Create(url);
+
+            try
+            {
+                var response = (HttpWebResponse)request.GetResponse();
+            }
+            catch (Exception)
+            {
+                throw new UserFriendlyException($"请求失败：{url}");
             }
         }
 
@@ -135,16 +205,16 @@ namespace ServiceTrigger.Jobs
             string cron = Cron.Daily();
             switch (entity.Frequency)
             {
-                case FrequencyEnum.Minutely:
+                case FrequencyEnum.每分钟:
                     cron = Cron.Minutely();
                     break;
-                case FrequencyEnum.Hourly:
+                case FrequencyEnum.每小时:
                     cron = Cron.Hourly();
                     break;
-                case FrequencyEnum.Daily:
+                case FrequencyEnum.每天:
                     cron = Cron.Daily();
                     break;
-                case FrequencyEnum.Monthly:
+                case FrequencyEnum.每月:
                     cron = Cron.Monthly();
                     break;
                 default:

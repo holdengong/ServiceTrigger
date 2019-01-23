@@ -984,6 +984,26 @@ namespace ServiceTrigger.Migrations
                     b.ToTable("AbpUsers");
                 });
 
+            modelBuilder.Entity("ServiceTrigger.Hangfire.Hash", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime?>("ExpireAt");
+
+                    b.Property<string>("Field")
+                        .HasMaxLength(40);
+
+                    b.Property<string>("Key")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Value");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("hash");
+                });
+
             modelBuilder.Entity("ServiceTrigger.Jobs.Job", b =>
                 {
                     b.Property<int>("Id")

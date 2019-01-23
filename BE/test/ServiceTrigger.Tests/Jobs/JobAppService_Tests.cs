@@ -41,7 +41,7 @@ namespace ServiceTrigger.Tests.Users
                                         new JobEditDto()
                                         {
                                             ApiUrl = "api/job/create",
-                                            Frequency = FrequencyEnum.Daily,
+                                            Frequency = FrequencyEnum.每天,
                                             IsEnable = false,
                                             JobName = "myJob",
                                             ProjectName = "ddd",

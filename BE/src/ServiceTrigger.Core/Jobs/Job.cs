@@ -45,9 +45,9 @@ namespace ServiceTrigger.Jobs
 
     public enum FrequencyEnum
     {
-        Minutely = 10,
-        Hourly = 20,
-        Daily = 30,
-        Monthly = 40
+        每分钟 = 10,
+        每小时 = 20,
+        每天 = 30,
+        每月 = 40
     }
 }

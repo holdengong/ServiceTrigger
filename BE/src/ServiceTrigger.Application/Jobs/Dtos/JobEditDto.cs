@@ -16,14 +16,13 @@ namespace ServiceTrigger.Jobs.Dtos
         [Required]
         public FrequencyEnum Frequency { get; set; }
 
-        [Required]
         public bool IsEnable { get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// 项目名称
         /// </summary>
         [Required]
-        public int ProjectId { get; set; }
+        public string ProjectName { get; set; }
 
         [Required]
         [MaxLength(ServiceTriggerConsts.MaxUrlLength)]

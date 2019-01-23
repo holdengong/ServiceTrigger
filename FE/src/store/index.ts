@@ -8,6 +8,7 @@ import user from './modules/user'
 import role from './modules/role'
 import tenant from './modules/tenant'
 import project from './modules/project'
+import job from './modules/job'
 const store = new Vuex.Store({
     state: {
         //
@@ -25,7 +26,8 @@ const store = new Vuex.Store({
         user,
         role,
         tenant,
-        project
+        project,
+        job
     }
 });
 

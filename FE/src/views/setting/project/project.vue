@@ -15,7 +15,7 @@
             </div>
         </Card>
         <create-project v-model="createModalShow" @save-success="getpage"></create-project>
-        <edit-user v-model="editModalShow" @save-success="getpage"></edit-user>
+        <edit-project v-model="editModalShow" @save-success="getpage"></edit-project>
     </div>
 </template>
 <script lang="ts">
@@ -24,7 +24,7 @@
     import AbpBase from '@/lib/abpbase'
     import PageRequest from '@/store/entities/page-request'
     import CreateProject from './create-project.vue'
-    import EditUser from './edit-user.vue'
+    import EditProject from './edit-project.vue'
     class  PageProjectRequest extends PageRequest{
         keyword:string;
         isActive:boolean=null;//nullable
@@ -33,7 +33,7 @@
     }
 
     @Component({
-        components:{CreateProject,EditUser}
+        components:{CreateProject,EditProject}
     })
     export default class Projects extends AbpBase{
         edit(){
@@ -155,9 +155,6 @@
         }]
         async created(){
             this.getpage();
-           /*  await this.$store.dispatch({
-                type:'user/getRoles'
-            }) */
         }
     }
 </script>

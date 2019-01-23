@@ -1,4 +1,5 @@
 ﻿using Abp.Domain.Entities.Auditing;
+using ServiceTrigger.Jobs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -22,5 +23,7 @@ namespace ServiceTrigger.Projects
         [Required]
         [MaxLength(ServiceTriggerConsts.MaxUrlLength)]
         public string Host { get; set; }
+
+        public ICollection<Job> Jobs { get; set; }
     }
 }

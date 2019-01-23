@@ -44,7 +44,7 @@ namespace ServiceTrigger.Tests.Users
                                             Frequency = FrequencyEnum.Daily,
                                             IsEnable = false,
                                             JobName = "myJob",
-                                            ProjectId = 1,
+                                            ProjectName = "ddd",
                                             Id = 0
                                         });
 

@@ -103,9 +103,21 @@
     <text name="EditProject">编辑项目</text>
     <text name="DeleteProjectConfirm">确认删除该项目？</text>
     <text name="ProjectName">项目名称</text>
-    <text name="Host">域名(例如：http://www.31huiyi.com)</text>
+    <text name="Host">域名</text>
   
+    <text name="Jobs">定时任务</text>
+    <text name="CreateNewJob">创建新定时任务</text>
+    <text name="JobDetails">定时任务详情</text>
+    <text name="EditJob">编辑定时任务</text>
+    <text name="DeleteJobConfirm">确认删除该定时任务？</text>
+    <text name="JobName">定时任务名称</text>
+    <text name="ApiUrl">API地址</text>
+    
+    <text name="Frequency">调度频率</text>
+    
     <text name="Dashboard">仪表盘</text>
+  
+    <text name="FieldIsRequired">必填</text>
   </texts>
 </localizationDictionary>
 

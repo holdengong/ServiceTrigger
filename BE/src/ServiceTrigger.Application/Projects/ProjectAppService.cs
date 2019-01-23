@@ -48,7 +48,7 @@ namespace ServiceTrigger.Jobs
             //TODO:更新前的逻辑判断，是否允许更新
             var entity = await _projectRepository.GetAsync(input.Id.Value);
 
-            entity = ObjectMapper.Map<Project>(input);
+            entity = ObjectMapper.Map(input, entity);
 
             // ObjectMapper.Map(input, entity);
             await _projectRepository.UpdateAsync(entity);
@@ -57,7 +57,7 @@ namespace ServiceTrigger.Jobs
         public async Task Delete(EntityDto<int> entity)
         {
             //删除前的逻辑，是否允许删除
-            var jobCount = await _jobRepository.CountAsync(e => e.ProjectId == entity.Id);
+            var jobCount = await _jobRepository.CountAsync(e => e.Project.Id == entity.Id);
 
             if (jobCount > 0)
             {

@@ -33,6 +33,14 @@ namespace ServiceTrigger.Jobs
             //TODO:新增前的逻辑判断，是否允许新增
             var entity = ObjectMapper.Map<Job>(input);
 
+            var project = await _projectRepository.FirstOrDefaultAsync(e=>e.ProjectName==input.ProjectName);
+
+            if (project == null)
+            {
+                throw new UserFriendlyException("不存在该项目"); 
+            }
+
+            entity.Project = project;
             entity.Id = await _jobRepository.InsertAndGetIdAsync(entity);
 
             RegisterJobInHangfire(entity);
@@ -48,7 +56,15 @@ namespace ServiceTrigger.Jobs
 
             entity = ObjectMapper.Map(input, entity);
 
-            // ObjectMapper.Map(input, entity);
+            var project = await _projectRepository.FirstOrDefaultAsync(e => e.ProjectName == input.ProjectName);
+
+            if (project == null)
+            {
+                throw new UserFriendlyException("不存在该项目");
+            }
+
+            entity.Project = project;
+
             await _jobRepository.UpdateAsync(entity);
 
             RegisterJobInHangfire(entity);
@@ -56,9 +72,9 @@ namespace ServiceTrigger.Jobs
 
         public async Task Delete(EntityDto<int> entity)
         {
-            //删除前的逻辑，是否允许删除
-
             await _jobRepository.DeleteAsync(entity.Id);
+
+            RecurringJob.RemoveIfExists(entity.Id.ToString());
         }
 
         public async Task<JobListDto> Get(EntityDto<int> input)
@@ -70,13 +86,19 @@ namespace ServiceTrigger.Jobs
 
         public async Task<PagedResultDto<JobListDto>> GetAll(GetJobInput input)
         {
-            var query = _jobRepository.GetAll();
+            var query = _jobRepository.GetAllIncluding(e=>e.Project).OrderBy(input.Sorting).PageBy(input);
 
             var jobsCount = await query.CountAsync();
 
-            var jobs = await query.OrderBy(input.Sorting).PageBy(input).ToListAsync();
+            var jobs = await query.ToListAsync();
 
-            var dtos = ObjectMapper.Map<List<JobListDto>> (jobs);
+            var dtos = new List<JobListDto>();
+
+            jobs.ForEach(j=> {
+                var dto = ObjectMapper.Map<JobListDto>(j);
+                dto.ProjectName = j.Project.ProjectName;
+                dtos.Add(dto);
+            });
 
             return new PagedResultDto<JobListDto>(jobsCount, dtos);
         }
@@ -94,7 +116,7 @@ namespace ServiceTrigger.Jobs
 
         protected async void RegisterJobInHangfire(Job entity)
         {
-            var project = await _projectRepository.GetAsync(entity.ProjectId);
+            var project = await _projectRepository.GetAsync(entity.Project.Id);
 
             if (project == null)
             {

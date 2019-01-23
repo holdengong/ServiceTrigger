@@ -13,7 +13,7 @@
                             <Input v-model="project.projectName" :maxlength="32" :minlength="2"></Input>
                         </FormItem>
                         <FormItem :label="L('Host')" prop="host">
-                            <Input v-model="project.Host" :maxlength="32" :minlength="2"></Input>
+                            <Input v-model="project.host" :maxlength="32" :minlength="2"></Input>
                         </FormItem>
                     </TabPane>
                 </Tabs>
@@ -56,6 +56,8 @@
         validatePassCheck = (rule:any, value:any, callback:any) => {
         };
         projectRule={
+            projectName:[{required: true,message:this.L('FieldIsRequired',undefined,this.L('ProjectName')),trigger: 'blur'}],
+            host:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('Host')),trigger: 'blur'}],
         }
     }
 </script>

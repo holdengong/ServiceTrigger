@@ -1,4 +1,5 @@
 ﻿using Abp.Domain.Entities.Auditing;
+using ServiceTrigger.Projects;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -36,10 +37,10 @@ namespace ServiceTrigger.Jobs
         public string ApiUrl { get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// 项目信息
         /// </summary>
         [Required]
-        public int ProjectId { get; set; }
+        public Project Project { get; set; }
     }
 
     public enum FrequencyEnum

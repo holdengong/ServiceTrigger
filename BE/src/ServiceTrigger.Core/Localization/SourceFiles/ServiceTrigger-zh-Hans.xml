@@ -126,6 +126,18 @@
 
     <text name="Trigger">现在触发</text>
     <text name="TriggerSuccess">触发成功</text>
+
+    <text name="Projects_View">查看项目</text>
+    <text name="Projects_Add">新增项目</text>
+    <text name="Projects_Save">保存项目</text>
+    <text name="Projects_Delete">删除项目</text>
+
+    <text name="Jobs_View">查看定时任务</text>
+    <text name="Jobs_Add">新增定时任务</text>
+    <text name="Jobs_Save">保存定时任务</text>
+    <text name="Jobs_Trigger">触发定时任务</text>
+
+    <text name="HangfireDashboard">仪表盘</text>
   </texts>
 </localizationDictionary>
 

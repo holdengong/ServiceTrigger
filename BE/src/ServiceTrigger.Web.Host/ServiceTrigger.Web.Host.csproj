@@ -29,6 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Abp.HangFire.AspNetCore" Version="4.1.0" />
+    <PackageReference Include="Hangfire.Dashboard.Authorization" Version="2.1.0" />
     <PackageReference Include="Hangfire.MySql.Core" Version="2.1.8" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.1">
       <PrivateAssets>All</PrivateAssets>

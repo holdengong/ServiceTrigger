@@ -1,10 +1,12 @@
 ﻿using Abp.Application.Services.Dto;
+using Abp.Authorization;
 using Abp.Domain.Repositories;
 using Abp.Linq.Extensions;
 using Abp.Threading.BackgroundWorkers;
 using Abp.UI;
 using Hangfire;
 using Microsoft.EntityFrameworkCore;
+using ServiceTrigger.Authorization;
 using ServiceTrigger.Hangfire;
 using ServiceTrigger.Jobs.Dtos;
 using ServiceTrigger.Projects;
@@ -17,6 +19,7 @@ using System.Threading.Tasks;
 
 namespace ServiceTrigger.Jobs
 {
+    [AbpAuthorize(PermissionNames.Jobs_View)]
     public class JobAppService : ServiceTriggerAppServiceBase, IJobAppService
     {
         private readonly IRepository<Job,int> _jobRepository;
@@ -37,6 +40,7 @@ namespace ServiceTrigger.Jobs
             _hashRepository = hashRepository;
         }
 
+        [AbpAuthorize(PermissionNames.Jobs_Save)]
         public async Task Create(JobEditDto input)
         {
             //TODO:新增前的逻辑判断，是否允许新增
@@ -60,6 +64,7 @@ namespace ServiceTrigger.Jobs
         /// <summary>
         ///     编辑Person
         /// </summary>
+        [AbpAuthorize(PermissionNames.Jobs_Save)]
         public async Task Update(JobEditDto input)
         {
             //TODO:更新前的逻辑判断，是否允许更新
@@ -83,6 +88,7 @@ namespace ServiceTrigger.Jobs
             RegisterJobInHangfire(entity);
         }
 
+        [AbpAuthorize(PermissionNames.Jobs_Delete)]
         public async Task Delete(EntityDto<int> entity)
         {
             await _jobRepository.DeleteAsync(entity.Id);
@@ -90,6 +96,7 @@ namespace ServiceTrigger.Jobs
             RecurringJob.RemoveIfExists(entity.Id.ToString());
         }
 
+        [AbpAuthorize(PermissionNames.Jobs_View)]
         public async Task<JobListDto> Get(EntityDto<int> input)
         {
             var entity = await _jobRepository.GetAsync(input.Id);
@@ -97,6 +104,7 @@ namespace ServiceTrigger.Jobs
             return ObjectMapper.Map<JobListDto>(entity);
         }
 
+        [AbpAuthorize(PermissionNames.Jobs_View)]
         public async Task<PagedResultDto<JobListDto>> GetAll(GetJobInput input)
         {
             var query = _jobRepository.GetAllIncluding(e=>e.Project).OrderBy(input.Sorting).PageBy(input);
@@ -153,6 +161,7 @@ namespace ServiceTrigger.Jobs
             return new PagedResultDto<JobListDto>(jobsCount, dtos);
         }
 
+        [AbpAuthorize(PermissionNames.Jobs_Save)]
         public async Task UpdateStatus(UpdateJobStatusInput input)
         {
             var job = await _jobRepository.GetAsync(input.Id);
@@ -164,6 +173,7 @@ namespace ServiceTrigger.Jobs
             }
         }
 
+        [AbpAuthorize(PermissionNames.Jobs_Trigger)]
         public void Trigger(EntityDto<int> entity)
         {
             RecurringJob.Trigger(entity.Id.ToString());

@@ -1,10 +1,12 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
+using Abp.Authorization;
 using Abp.AutoMapper;
 using Abp.Domain.Repositories;
 using Abp.Linq.Extensions;
 using Abp.UI;
 using Microsoft.EntityFrameworkCore;
+using ServiceTrigger.Authorization;
 using ServiceTrigger.Jobs.Dtos;
 using ServiceTrigger.Projects;
 using ServiceTrigger.Projects.Dtos;
@@ -16,6 +18,7 @@ using System.Threading.Tasks;
 
 namespace ServiceTrigger.Jobs
 {
+    [AbpAuthorize(PermissionNames.Projects_View)]
     public class ProjectAppService : ServiceTriggerAppServiceBase, IProjectAppService
     {
         private readonly IRepository<Project,int> _projectRepository;
@@ -27,6 +30,7 @@ namespace ServiceTrigger.Jobs
             _jobRepository = JobRepository;
         }
 
+        [AbpAuthorize(PermissionNames.Projects_Save)]
         public async Task Create(ProjectEditDto input)
         {
             if (await _projectRepository.CountAsync(e => e.ProjectName == input.ProjectName) > 0)
@@ -43,6 +47,7 @@ namespace ServiceTrigger.Jobs
         /// <summary>
         ///     编辑Person
         /// </summary>
+        [AbpAuthorize(PermissionNames.Projects_Save)]
         public async Task Update(ProjectEditDto input)
         {
             //TODO:更新前的逻辑判断，是否允许更新
@@ -54,6 +59,7 @@ namespace ServiceTrigger.Jobs
             await _projectRepository.UpdateAsync(entity);
         }
 
+        [AbpAuthorize(PermissionNames.Projects_Delete)]
         public async Task Delete(EntityDto<int> entity)
         {
             //删除前的逻辑，是否允许删除
@@ -67,6 +73,7 @@ namespace ServiceTrigger.Jobs
             await _projectRepository.DeleteAsync(entity.Id);
         }
 
+        [AbpAuthorize(PermissionNames.Projects_View)]
         public async Task<ProjectListDto> Get(EntityDto<int> input)
         {
             var entity = await _projectRepository.GetAsync(input.Id);
@@ -74,6 +81,7 @@ namespace ServiceTrigger.Jobs
             return ObjectMapper.Map<ProjectListDto>(entity);
         }
 
+        [AbpAuthorize(PermissionNames.Projects_View)]
         public async Task<PagedResultDto<ProjectListDto>> GetAll(GetProjectInput input)
         {
             var query = _projectRepository.GetAll();

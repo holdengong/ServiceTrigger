@@ -11,6 +11,17 @@ namespace ServiceTrigger.Authorization
             context.CreatePermission(PermissionNames.Pages_Users, L("Users"));
             context.CreatePermission(PermissionNames.Pages_Roles, L("Roles"));
             context.CreatePermission(PermissionNames.Pages_Tenants, L("Tenants"), multiTenancySides: MultiTenancySides.Host);
+
+            context.CreatePermission(PermissionNames.Projects_View, L("Projects_View"));
+            context.CreatePermission(PermissionNames.Projects_Save, L("Projects_Save"));
+            context.CreatePermission(PermissionNames.Projects_Delete, L("Projects_Delete"));
+
+            context.CreatePermission(PermissionNames.Jobs_View, L("Jobs_View"));
+            context.CreatePermission(PermissionNames.Jobs_Save, L("Jobs_Save"));
+            context.CreatePermission(PermissionNames.Jobs_Delete, L("Jobs_Delete"));
+            context.CreatePermission(PermissionNames.Jobs_Trigger, L("Jobs_Trigger"));
+
+            context.CreatePermission(PermissionNames.HangfireDashboard,L("HangfireDashboard"));
         }
 
         private static ILocalizableString L(string name)

@@ -54,8 +54,8 @@ export const appRouters: Array<Router> = [{
         { path: 'user', permission: 'Pages.Users', meta: { title: 'Users' }, name: 'user', component: () => import('../views/setting/user/user.vue') },
         { path: 'role', permission: 'Pages.Roles', meta: { title: 'Roles' }, name: 'role', component: () => import('../views/setting/role/role.vue') },
         { path: 'tenant', permission: 'Pages.Tenants', meta: { title: 'Tenants' }, name: 'tenant', component: () => import('../views/setting/tenant/tenant.vue') },
-        { path: 'project', meta: { title: 'Projects' }, name: 'project', component: () => import('../views/setting/project/project.vue') },
-        { path: 'job', meta: { title: 'Jobs' }, name: 'job', component: () => import('../views/setting/job/job.vue') }
+        { path: 'project',permission:'Projects.View', meta: { title: 'Projects' }, name: 'project', component: () => import('../views/setting/project/project.vue') },
+        { path: 'job',permission:'Jobs.View',meta: { title: 'Jobs' }, name: 'job', component: () => import('../views/setting/job/job.vue') }
        /*  { path: 'hangfire', meta: { title: 'Dashboard' }, name: 'hangfire', component: () => import('../views/setting/hangfire/hangfire.vue') } */
     ]
 }]

@@ -27,6 +27,7 @@
     import CreateJob from './create-job.vue'
     import EditJob from './edit-job.vue'
     import Util from '@/lib/util';
+
     class  PageJobRequest extends PageRequest{
         keyword:string;
         isActive:boolean=null;//nullable

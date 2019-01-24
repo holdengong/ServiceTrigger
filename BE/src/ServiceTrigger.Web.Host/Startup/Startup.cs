@@ -19,6 +19,9 @@ using Abp.AspNetCore.SignalR.Hubs;
 using Hangfire;
 using Hangfire.MySql.Core;
 using Hangfire.Dashboard;
+using Hangfire.Annotations;
+using Abp.Authorization;
+using System.Collections.Generic;
 
 namespace ServiceTrigger.Web.Host.Startup
 {
@@ -38,7 +41,8 @@ namespace ServiceTrigger.Web.Host.Startup
             // MVC
             services.AddMvc(
                 options => options.Filters.Add(new CorsAuthorizationFilterFactory(_defaultCorsPolicyName))
-            );
+            ).SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_2)
+            .AddJsonOptions(opt => opt.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss");
 
             IdentityRegistrar.Register(services);
             AuthConfigurer.Configure(services, _appConfiguration);
@@ -80,7 +84,11 @@ namespace ServiceTrigger.Web.Host.Startup
             });
 
             var connStr = _appConfiguration["ConnectionStrings:Default"];
-            services.AddHangfire(config => config.UseStorage(new MySqlStorage(connStr)));
+            services.AddHangfire(config =>
+                {
+                    config.UseStorage(new MySqlStorage(connStr));
+                }
+            );
 
             // Configure Abp and Dependency Injection
             return services.AddAbp<ServiceTriggerWebHostModule>(
@@ -91,7 +99,7 @@ namespace ServiceTrigger.Web.Host.Startup
             );
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IPermissionChecker permissionChecker)
         {
             app.UseAbp(options => { options.UseAbpRequestLocalization = false; }); // Initializes ABP framework.
 
@@ -132,7 +140,14 @@ namespace ServiceTrigger.Web.Host.Startup
 
             //Hangfire
             app.UseHangfireServer();
-            app.UseHangfireDashboard();
+
+            app.UseHangfireDashboard("/hangfire", new DashboardOptions()
+            {
+                AppPath = _appConfiguration["App:ClientRootAddress"],
+                Authorization = new[] { new DashboardAuthorization() },
+                DisplayStorageConnectionString = false,
+                StatsPollingInterval = 5
+            });
         }
     }
 }

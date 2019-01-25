@@ -17,10 +17,13 @@
   <ItemGroup>
     <PackageReference Include="Abp.AutoMapper" Version="4.1.0" />
     <PackageReference Include="Abp.ZeroCore.EntityFrameworkCore" Version="4.1.0" />
+    <PackageReference Include="Hangfire" Version="1.6.21" />
+    <PackageReference Include="LogDashboard" Version="1.0.5" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.2.0" />
     <PackageReference Include="Castle.Windsor.MsDependencyInjection" Version="3.3.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.4.0" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Localization\SourceFiles\ServiceTrigger-es.xml">

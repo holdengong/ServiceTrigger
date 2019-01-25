@@ -47,13 +47,7 @@ namespace ServiceTrigger.Jobs
             var entity = ObjectMapper.Map<Job>(input);
 
             var project = await _projectRepository.FirstOrDefaultAsync(e=>e.ProjectName==input.ProjectName);
-
-            if (project == null)
-            {
-                throw new UserFriendlyException("不存在该项目"); 
-            }
-
-            entity.Project = project;
+            entity.Project = project ?? throw new UserFriendlyException("不存在该项目");
             entity.Id = await _jobRepository.InsertAndGetIdAsync(entity);
 
             TestApiConnection(project.Host, entity.ApiUrl);

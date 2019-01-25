@@ -22,6 +22,15 @@ using Hangfire.Dashboard;
 using Hangfire.Annotations;
 using Abp.Authorization;
 using System.Collections.Generic;
+using ServiceTrigger.Authentication;
+using ServiceTrigger.Hangfire;
+using System.Text;
+using LogDashboard;
+using LogDashboard.Extensions;
+using System.IO;
+using Microsoft.AspNetCore.Authorization;
+using ServiceTrigger.Authorization.External.LogDashboard;
+using ServiceTrigger.Authorization.External.Hangfire;
 
 namespace ServiceTrigger.Web.Host.Startup
 {
@@ -31,9 +40,13 @@ namespace ServiceTrigger.Web.Host.Startup
 
         private readonly IConfigurationRoot _appConfiguration;
 
+        private readonly IHostingEnvironment _env;
+
         public Startup(IHostingEnvironment env)
         {
             _appConfiguration = env.GetAppConfiguration();
+
+            _env = env;
         }
 
         public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -90,6 +103,13 @@ namespace ServiceTrigger.Web.Host.Startup
                 }
             );
 
+            var externalAuthenticationUrl = _appConfiguration["App:ServerRootAddress"].EnsureEndsWith('/') + "api/services/app/Account/CheckUserPermissionByUserId";
+            services.AddLogDashboard(opt =>
+            {
+                opt.SetRootPath(Path.Combine(_env.ContentRootPath, @"App_Data/Logs"));
+                opt.AddAuthorizationFilter(new LogDashboardAuthorizationFilter(externalAuthenticationUrl));
+            });
+
             // Configure Abp and Dependency Injection
             return services.AddAbp<ServiceTriggerWebHostModule>(
                 // Configure Log4Net logging
@@ -141,13 +161,15 @@ namespace ServiceTrigger.Web.Host.Startup
             //Hangfire
             app.UseHangfireServer();
 
+            var externalAuthenticationUrl = _appConfiguration["App:ServerRootAddress"].EnsureEndsWith('/') + "api/services/app/Account/CheckUserPermissionByUserId";
             app.UseHangfireDashboard("/hangfire", new DashboardOptions()
             {
-                AppPath = _appConfiguration["App:ClientRootAddress"],
-                Authorization = new[] { new DashboardAuthorization() },
+                AppPath = _appConfiguration["App:ClientRootAddress"].Trim('/') + "/" + _appConfiguration["App:BacksiteRoute"].Trim('/'),
+                Authorization = new[] { new HangfireDashboardAuthorizationFilter(externalAuthenticationUrl) },
                 DisplayStorageConnectionString = false,
-                StatsPollingInterval = 5
             });
+
+            app.UseLogDashboard();
         }
     }
 }

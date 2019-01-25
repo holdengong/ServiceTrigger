@@ -135,9 +135,14 @@
     <text name="Jobs_View">查看定时任务</text>
     <text name="Jobs_Add">新增定时任务</text>
     <text name="Jobs_Save">保存定时任务</text>
+    <text name="Jobs_Delete">删除定时任务</text>
     <text name="Jobs_Trigger">触发定时任务</text>
 
     <text name="HangfireDashboard">仪表盘</text>
+
+    <text name="HangfireDashboardAccessDeny">您没有仪表盘查看权限</text>
+
+    <text name="Log">日志</text>
   </texts>
 </localizationDictionary>
 

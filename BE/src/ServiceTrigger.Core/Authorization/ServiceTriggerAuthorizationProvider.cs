@@ -21,7 +21,9 @@ namespace ServiceTrigger.Authorization
             context.CreatePermission(PermissionNames.Jobs_Delete, L("Jobs_Delete"));
             context.CreatePermission(PermissionNames.Jobs_Trigger, L("Jobs_Trigger"));
 
-            context.CreatePermission(PermissionNames.HangfireDashboard,L("HangfireDashboard"));
+            context.CreatePermission(PermissionNames.Tools_HangfireDashboard,L("HangfireDashboard"));
+
+            context.CreatePermission(PermissionNames.Tools_Log, L("Log"));
         }
 
         private static ILocalizableString L(string name)

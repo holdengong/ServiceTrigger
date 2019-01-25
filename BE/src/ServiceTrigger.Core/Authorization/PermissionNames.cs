@@ -22,6 +22,8 @@
 
         public const string Jobs_Trigger = "Jobs.Trigger";
 
-        public const string HangfireDashboard = "HangfireDashboard";
+        public const string Tools_HangfireDashboard = "Tools.HangfireDashboard";
+
+        public const string Tools_Log = "Tools.Log";
     }
 }

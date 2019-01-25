@@ -1,8 +1,10 @@
-using System.Threading.Tasks;
 using Abp.Configuration;
+using Abp.Web.Models;
 using Abp.Zero.Configuration;
+using Microsoft.AspNetCore.Authorization;
 using ServiceTrigger.Authorization.Accounts.Dto;
 using ServiceTrigger.Authorization.Users;
+using System.Threading.Tasks;
 
 namespace ServiceTrigger.Authorization.Accounts
 {
@@ -14,6 +16,13 @@ namespace ServiceTrigger.Authorization.Accounts
             UserRegistrationManager userRegistrationManager)
         {
             _userRegistrationManager = userRegistrationManager;
+        }
+
+        [AllowAnonymous]
+        [DontWrapResult]
+        public async Task<bool> CheckUserPermissionByUserId(long userId, string permissionName)
+        {
+            return await UserManager.IsGrantedAsync(userId, permissionName);
         }
 
         public async Task<IsTenantAvailableOutput> IsTenantAvailable(IsTenantAvailableInput input)
@@ -50,5 +59,7 @@ namespace ServiceTrigger.Authorization.Accounts
                 CanLogin = user.IsActive && (user.IsEmailConfirmed || !isEmailConfirmationRequiredForLogin)
             };
         }
+
+
     }
 }

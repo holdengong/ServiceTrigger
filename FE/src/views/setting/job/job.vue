@@ -5,7 +5,6 @@
                 <Form ref="queryForm" :label-width="80" label-position="left" inline>
                     <Row>
                         <Button @click="create" icon="android-add" type="primary" size="large">{{L('Add')}}</Button>
-                        <Button @click="openDashboard" icon="android-add" type="primary" class="toolbar-btn" size="large">{{L('Dashboard')}}</Button>
                     </Row>
                 </Form>
                 <div class="margin-top-10">
@@ -56,10 +55,6 @@
         }
         create(){
             this.createModalShow=true;
-        }
-
-        openDashboard(){
-             window.open(Url+"hangfire","_blank");
         }
 
         isActiveChange(val:string){

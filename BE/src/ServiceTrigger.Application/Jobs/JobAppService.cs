@@ -155,16 +155,33 @@ namespace ServiceTrigger.Jobs
             return new PagedResultDto<JobListDto>(jobsCount, dtos);
         }
 
-        [AbpAuthorize(PermissionNames.Jobs_Save)]
-        public async Task UpdateStatus(UpdateJobStatusInput input)
+        [AbpAuthorize(PermissionNames.Jobs_Enable)]
+        public async Task Enable(EntityDto<int> entity)
         {
-            var job = await _jobRepository.GetAsync(input.Id);
+            var job = _jobRepository.GetAllIncluding(p => p.Project).FirstOrDefault(j => j.Id == entity.Id);
+
+            if (job == null || job.Project == null)
+            {
+                throw new UserFriendlyException("定时任务信息不完整");
+            }
+
+            job.IsEnable = true;
+            await _jobRepository.UpdateAsync(job);
+            RegisterJobInHangfire(job);
+        }
+
+        [AbpAuthorize(PermissionNames.Jobs_Disable)]
+        public async Task Disable(EntityDto<int> entity)
+        {
+            var job = await _jobRepository.GetAsync(entity.Id);
 
             if (job != null)
             {
-                job.IsEnable = input.IsEnable;
+                job.IsEnable = false;
                 await _jobRepository.UpdateAsync(job);
             }
+
+            RecurringJob.RemoveIfExists(entity.Id.ToString());
         }
 
         [AbpAuthorize(PermissionNames.Jobs_Trigger)]
@@ -190,15 +207,12 @@ namespace ServiceTrigger.Jobs
 
         protected async void RegisterJobInHangfire(Job entity)
         {
-            var project = await _projectRepository.GetAsync(entity.Project.Id);
-
-            if (project == null)
+            if (entity == null || entity.Project == null)
             {
-                throw new UserFriendlyException("项目不存在");
+                throw new UserFriendlyException("定时任务信息不完整");
             }
 
-            var projectHost = project.Host;
-
+            var projectHost = entity.Project.Host;
 
             SendRequestJobArgs args = new SendRequestJobArgs()
             {

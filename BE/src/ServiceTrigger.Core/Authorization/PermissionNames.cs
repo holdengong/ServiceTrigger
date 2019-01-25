@@ -22,6 +22,10 @@
 
         public const string Jobs_Trigger = "Jobs.Trigger";
 
+        public const string Jobs_Enable = "Jobs.Enable";
+
+        public const string Jobs_Disable = "Jobs.Disable";
+
         public const string Tools_HangfireDashboard = "Tools.HangfireDashboard";
 
         public const string Tools_Log = "Tools.Log";

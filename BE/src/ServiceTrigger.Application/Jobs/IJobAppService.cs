@@ -44,11 +44,18 @@ namespace ServiceTrigger.Jobs
         Task Delete(EntityDto<int> entity);
 
         /// <summary>
-        /// 更新任务是否启用
+        /// 启用任务
         /// </summary>
-        /// <param name="input"></param>
+        /// <param name="entity"></param>
         /// <returns></returns>
-        Task UpdateStatus(UpdateJobStatusInput input);
+        Task Enable(EntityDto<int> entity);
+
+        /// <summary>
+        /// 禁用任务
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        Task Disable(EntityDto<int> entity);
 
         /// <summary>
         /// 现在触发定时任务

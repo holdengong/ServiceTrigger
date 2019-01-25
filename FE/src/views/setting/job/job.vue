@@ -105,13 +105,20 @@
         columns=[{
             title:this.L('JobName'),
             key:'jobName'
-        },{
+        },
+        {
+            title:this.L('IsEnable'),
+            key:'isEnable'
+        },
+        {
             title:this.L('ProjectName'),
             key:'projectName'
-        },{
+        },
+        {
             title:this.L('Frequency'),
             key:'frequency'
-        },{
+        },
+        {
             title:this.L('ApiUrl'),
             key:'apiUrl'
         },
@@ -119,22 +126,22 @@
             title:this.L('Cron'),
             key:'cron'
         },
-          {
+        {
             title:this.L('CreatedAt'),
             key:'createdAt'
         },
-          {
+        {
             title:this.L('LastExecution'),
             key:'lastExecution'
         },
-          {
+        {
             title:this.L('NextExecution'),
             key:'nextExecution'
         },
         {
             title:this.L('Actions'),
             key:'Actions',
-            width:200,
+            width:300,
             render:(h:any,params:any)=>{
                 return h('div',[
                     h('Button',{
@@ -152,6 +159,53 @@
                             }
                         }
                     },this.L('Edit')),
+
+                    h('Button',{
+                        props:{
+                            type:'primary',
+                            size:'small'
+                        },
+                        style:{
+                            marginRight:'5px'
+                        },
+                        on:{
+                             click:async()=>{
+                                await this.$store.dispatch({
+                                                type:'job/enable',
+                                                data:params.row
+                                            });
+
+                                 this.$Notice.success({
+                                    title: this.L('Success')
+                                });
+
+                                await this.getpage();
+                            }
+                        }
+                    },this.L('Enable')),
+                     h('Button',{
+                        props:{
+                            type:'primary',
+                            size:'small'
+                        },
+                        style:{
+                            marginRight:'5px'
+                        },
+                        on:{
+                           click:async()=>{
+                                await this.$store.dispatch({
+                                                type:'job/disable',
+                                                data:params.row
+                                            });
+
+                                 this.$Notice.success({
+                                    title: this.L('Success')
+                                });
+
+                                await this.getpage();
+                            }
+                        }
+                    },this.L('Disable')),
                     h('Button',{
                         props:{
                             type:'primary',

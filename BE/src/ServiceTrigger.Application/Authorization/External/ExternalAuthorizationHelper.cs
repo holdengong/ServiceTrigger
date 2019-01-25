@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.IO;
@@ -14,55 +15,44 @@ namespace ServiceTrigger.Authorization.External
 {
      public static class ExternalAuthorizationHelper
     {
-        public static Dictionary<string, DateTime> SimpleCache { get; set; } = new Dictionary<string, DateTime>();
+        private static ConcurrentDictionary<string, DateTime> _dict { get; set; } = new ConcurrentDictionary<string, DateTime>();
+
         public static bool IsGranted(HttpContext httpContext, string authenticateApiUrl,string permissionName)
         {
+            var isGranted = false;
+
             try
             {
                 var token = httpContext.Request.Cookies["Abp.AuthToken"];
 
                 long userId = GetUserIdFromJwtToken(token);
 
-                var isGranted = false;
+                string url = authenticateApiUrl + $"?userId={userId}&permissionName={permissionName}";
 
-                string cacheKey = $"{userId}_{permissionName}";
-                isGranted = GetFromCache(cacheKey);
-
-                if (!isGranted)
+                if (url.StartsWith("https"))
                 {
-                    string url = authenticateApiUrl + $"?userId={userId}&permissionName={permissionName}";
-
-                    if (url.StartsWith("https"))
-                    {
-                        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls;
-                    }
-
-                    HttpClient hc = new HttpClient();
-
-                    var postData = new
-                    {
-                        userId = userId,
-                        permissionName = permissionName
-                    };
-
-                    StringContent stringContent = new StringContent(JsonConvert.SerializeObject(postData));
-
-                    var result = hc.PostAsync(url, stringContent).Result.Content.ReadAsStringAsync().Result;
-
-                    isGranted = result.Equals(true.ToString(), StringComparison.CurrentCultureIgnoreCase);
-
-                    if (isGranted)
-                    {
-                        SimpleCache.Add(cacheKey, DateTime.Now);
-                    }
+                    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls;
                 }
 
-                return isGranted;
+                HttpClient hc = new HttpClient();
+
+                var postData = new
+                {
+                    userId = userId,
+                    permissionName = permissionName
+                };
+
+                StringContent stringContent = new StringContent(JsonConvert.SerializeObject(postData));
+
+                var result = hc.PostAsync(url, stringContent).Result.Content.ReadAsStringAsync().Result;
+
+                isGranted = result.Equals(true.ToString(), StringComparison.CurrentCultureIgnoreCase);
             }
             catch (Exception ex)
             {
-                return false;
             }
+
+            return isGranted;
         }
 
         public static long GetUserIdFromJwtToken(string token)
@@ -83,11 +73,11 @@ namespace ServiceTrigger.Authorization.External
         public static bool GetFromCache(string userIdAndPermissionName)
         {
             bool isGranted = false;
-            if (SimpleCache.ContainsKey(userIdAndPermissionName))
+            if (_dict.ContainsKey(userIdAndPermissionName))
             {
-                if (DateTime.Now - SimpleCache[userIdAndPermissionName] > TimeSpan.FromMinutes(1))
+                if (DateTime.Now - _dict[userIdAndPermissionName] > TimeSpan.FromMinutes(1))
                 {
-                    SimpleCache.Remove(userIdAndPermissionName);
+                    _dict.TryRemove(userIdAndPermissionName, out DateTime dt);
                 }
                 else
                 {

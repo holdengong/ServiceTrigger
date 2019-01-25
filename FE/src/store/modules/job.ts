@@ -38,6 +38,12 @@ class JobModule extends ListModule<JobState,any,Job>{
         async trigger(context:ActionContext<JobState,any>,payload:any){
             await Ajax.post('/api/services/app/Job/Trigger', payload.data);
         },
+        async enable(context:ActionContext<JobState,any>,payload:any){
+            await Ajax.post('/api/services/app/Job/Enable', payload.data);
+        },
+        async disable(context:ActionContext<JobState,any>,payload:any){
+            await Ajax.post('/api/services/app/Job/Disable', payload.data);
+        },
         async get(context:ActionContext<JobState,any>,payload:any){
             let reponse=await Ajax.get('/api/services/app/Job/Get?Id='+payload.id);
             return reponse.data.result as Job;

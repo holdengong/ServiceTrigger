@@ -1,6 +1,7 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.Authorization;
 using Abp.Domain.Repositories;
+using Abp.Extensions;
 using Abp.Linq.Extensions;
 using Abp.Threading.BackgroundWorkers;
 using Abp.UI;
@@ -15,6 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace ServiceTrigger.Jobs
@@ -192,12 +194,17 @@ namespace ServiceTrigger.Jobs
 
         public void TestApiConnection(string host,string apiUrl)
         {
-            var url = host.Trim('/') + "/" + apiUrl.Trim('/');
-            var request = (HttpWebRequest)WebRequest.Create(url);
-
+            HttpClient hc = new HttpClient();
+            var url = host.EnsureEndsWith('/') + apiUrl.Trim('/');
+            
             try
             {
-                var response = (HttpWebResponse)request.GetResponse();
+                var response = hc.GetAsync(url).Result;
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new UserFriendlyException($"请求失败：{response.StatusCode}_{response.Content.ReadAsStringAsync().Result}");
+                }
             }
             catch (Exception)
             {
@@ -216,6 +223,7 @@ namespace ServiceTrigger.Jobs
 
             SendRequestJobArgs args = new SendRequestJobArgs()
             {
+                JobId = entity.Id,
                 Host = projectHost,
                 ApiUrl = entity.ApiUrl
             };

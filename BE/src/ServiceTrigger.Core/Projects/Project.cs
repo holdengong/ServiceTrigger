@@ -23,7 +23,5 @@ namespace ServiceTrigger.Projects
         [Required]
         [MaxLength(ServiceTriggerConsts.MaxUrlLength)]
         public string Host { get; set; }
-
-        public ICollection<Job> Jobs { get; set; }
     }
 }

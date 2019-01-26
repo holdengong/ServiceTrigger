@@ -15,6 +15,7 @@ namespace ServiceTrigger.EntityFrameworkCore
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<Hash> Hash { get; set; }
+        public DbSet<JobHistory> JobHistory { get; set; }
 
         public ServiceTriggerDbContext(DbContextOptions<ServiceTriggerDbContext> options)
             : base(options)
@@ -23,6 +24,7 @@ namespace ServiceTrigger.EntityFrameworkCore
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<JobHistory>().ToTable("st_jobhistory");
             modelBuilder.Entity<Job>().ToTable("st_job");
             modelBuilder.Entity<Project>().ToTable("st_project");
 

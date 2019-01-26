@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ServiceTrigger.EntityFrameworkCore;
 
 namespace ServiceTrigger.Migrations
 {
     [DbContext(typeof(ServiceTriggerDbContext))]
-    partial class ServiceTriggerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190126075142_201901261540_Modify_JobHistory")]
+    partial class _201901261540_Modify_JobHistory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1059,8 +1061,6 @@ namespace ServiceTrigger.Migrations
 
                     b.Property<string>("ErrorMsg");
 
-                    b.Property<int>("HttpStatusCode");
-
                     b.Property<bool>("IsDeleted");
 
                     b.Property<int>("JobId");
@@ -1078,7 +1078,9 @@ namespace ServiceTrigger.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("st_jobhistory");
+                    b.HasIndex("JobId");
+
+                    b.ToTable("JobHistory");
                 });
 
             modelBuilder.Entity("ServiceTrigger.MultiTenancy.Tenant", b =>
@@ -1315,8 +1317,16 @@ namespace ServiceTrigger.Migrations
             modelBuilder.Entity("ServiceTrigger.Jobs.Job", b =>
                 {
                     b.HasOne("ServiceTrigger.Projects.Project", "Project")
-                        .WithMany()
+                        .WithMany("Jobs")
                         .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("ServiceTrigger.Jobs.JobHistory", b =>
+                {
+                    b.HasOne("ServiceTrigger.Jobs.Job", "Job")
+                        .WithMany("JobHistorys")
+                        .HasForeignKey("JobId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ServiceTrigger.EntityFrameworkCore;
 
 namespace ServiceTrigger.Migrations
 {
     [DbContext(typeof(ServiceTriggerDbContext))]
-    partial class ServiceTriggerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190126083148_201901261631_Modify_JobHistory")]
+    partial class _201901261631_Modify_JobHistory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1078,6 +1080,8 @@ namespace ServiceTrigger.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("JobId");
+
                     b.ToTable("st_jobhistory");
                 });
 
@@ -1315,8 +1319,16 @@ namespace ServiceTrigger.Migrations
             modelBuilder.Entity("ServiceTrigger.Jobs.Job", b =>
                 {
                     b.HasOne("ServiceTrigger.Projects.Project", "Project")
-                        .WithMany()
+                        .WithMany("Jobs")
                         .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("ServiceTrigger.Jobs.JobHistory", b =>
+                {
+                    b.HasOne("ServiceTrigger.Jobs.Job", "Job")
+                        .WithMany()
+                        .HasForeignKey("JobId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

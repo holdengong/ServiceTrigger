@@ -128,15 +128,21 @@
         },
         {
             title:this.L('CreatedAt'),
-            key:'createdAt'
+            render:(h:any,params:any)=>{
+                return h('span',new Date(params.row.createdAt).toLocaleString())
+            }
         },
         {
             title:this.L('LastExecution'),
-            key:'lastExecution'
+            render:(h:any,params:any)=>{
+                return h('span',new Date(params.row.lastExecution).toLocaleString())
+            }
         },
         {
             title:this.L('NextExecution'),
-            key:'nextExecution'
+            render:(h:any,params:any)=>{
+                return h('span',new Date(params.row.nextExecution).toLocaleString())
+            }
         },
         {
             title:this.L('Actions'),
@@ -246,6 +252,7 @@
                                                 type:'job/delete',
                                                 data:params.row
                                             })
+                                            
                                             await this.getpage();
                                         }
                                 })

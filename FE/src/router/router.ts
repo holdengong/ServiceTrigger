@@ -56,6 +56,7 @@ export const appRouters: Array<Router> = [{
         { path: 'tenant', permission: 'Pages.Tenants', meta: { title: 'Tenants' }, name: 'tenant', component: () => import('../views/setting/tenant/tenant.vue') },
         { path: 'project',permission:'Projects.View', meta: { title: 'Projects' }, name: 'project', component: () => import('../views/setting/project/project.vue') },
         { path: 'job',permission:'Jobs.View',meta: { title: 'Jobs' }, name: 'job', component: () => import('../views/setting/job/job.vue') },
+        { path: 'jobHistory',meta: { title: 'JobHistories' }, name: 'jobHistories', component: () => import('../views/setting/jobHistory/jobHistory.vue') },
         { path: '/',permission:'Tools.HangfireDashboard', meta: { title: 'Dashboard' }, name: 'dashboard', component: null},
         { path: '/',permission:'Tools.Log', meta: { title: 'Log' }, name: 'log', component: null}
     ]

@@ -1,4 +1,5 @@
 ﻿using Abp.Domain.Entities.Auditing;
+using ServiceTrigger.Jobs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -6,13 +7,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Net;
 using System.Text;
 
-namespace ServiceTrigger.Jobs
+namespace ServiceTrigger.JobHistories
 {
     [Table("st_JobHistory")]
     public class JobHistory: FullAuditedEntity
     {
-        public int JobId { get; set; }
-
         [Required]
         public string RequestUrl { get; set; }
         public string ResultString { get; set; }
@@ -23,5 +22,8 @@ namespace ServiceTrigger.Jobs
         public bool Result { get; set; }
 
         public HttpStatusCode HttpStatusCode { get; set; }
+
+        public int JobId { get; set; }
+        public Job Job { get; set; }
     }
 }

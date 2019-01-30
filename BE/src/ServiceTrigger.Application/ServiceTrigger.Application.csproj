@@ -16,4 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ServiceTrigger.Core\ServiceTrigger.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="JobHistories\Dtos\LTMAutoMapper\" />
+  </ItemGroup>
 </Project>

@@ -1,5 +1,6 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.Authorization;
+using Abp.AutoMapper;
 using Abp.Domain.Repositories;
 using Abp.Extensions;
 using Abp.Linq.Extensions;
@@ -9,6 +10,7 @@ using Hangfire;
 using Microsoft.EntityFrameworkCore;
 using ServiceTrigger.Authorization;
 using ServiceTrigger.Hangfire;
+using ServiceTrigger.JobHistories;
 using ServiceTrigger.Jobs.Dtos;
 using ServiceTrigger.Projects;
 using System;
@@ -27,19 +29,22 @@ namespace ServiceTrigger.Jobs
         private readonly IRepository<Job,int> _jobRepository;
         private readonly IRepository<Project, int> _projectRepository;
         private readonly IRepository<Hash, int> _hashRepository;
+        private readonly IRepository<JobHistory, int> _jobHistoryRepository;
 
         private readonly IBackgroundWorkerManager _backgroundWorkerManager;
 
         public JobAppService(IRepository<Job, int> jobRepository
-            ,IRepository<Project,int> projectRepository
+            , IRepository<Project, int> projectRepository
             , IBackgroundWorkerManager backgroundWorkerManager
             , IRepository<Hash, int> hashRepository
+            , IRepository<JobHistory, int> jobHistoryRepository
             )
         {
             _jobRepository = jobRepository;
             _projectRepository = projectRepository;
             _backgroundWorkerManager = backgroundWorkerManager;
             _hashRepository = hashRepository;
+            _jobHistoryRepository = jobHistoryRepository;
         }
 
         [AbpAuthorize(PermissionNames.Jobs_Save)]
@@ -100,7 +105,8 @@ namespace ServiceTrigger.Jobs
             return ObjectMapper.Map<JobListDto>(entity);
         }
 
-        [AbpAuthorize(PermissionNames.Jobs_View)]
+        //[AbpAuthorize(PermissionNames.Jobs_View)]
+        [AbpAllowAnonymous]
         public async Task<PagedResultDto<JobListDto>> GetAll(GetJobInput input)
         {
             var query = _jobRepository.GetAllIncluding(e=>e.Project).OrderBy(input.Sorting).PageBy(input);

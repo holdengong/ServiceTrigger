@@ -1,4 +1,5 @@
 ﻿using Abp.Domain.Entities.Auditing;
+using ServiceTrigger.JobHistories;
 using ServiceTrigger.Projects;
 using System;
 using System.Collections.Generic;
@@ -36,11 +37,10 @@ namespace ServiceTrigger.Jobs
         [MaxLength(ServiceTriggerConsts.MaxUrlLength)]
         public string ApiUrl { get; set; }
 
-        /// <summary>
-        /// 项目信息
-        /// </summary>
-        [Required]
+        public int ProjectId { get; set; }
         public Project Project { get; set; }
+
+        public List<JobHistory> JobHistories { get; set; }
     }
 
     public enum FrequencyEnum

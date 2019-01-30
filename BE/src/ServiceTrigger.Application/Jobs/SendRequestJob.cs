@@ -4,6 +4,7 @@ using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
 using Abp.Extensions;
 using Abp.Timing;
+using ServiceTrigger.JobHistories;
 using System;
 using System.Net;
 using System.Net.Http;

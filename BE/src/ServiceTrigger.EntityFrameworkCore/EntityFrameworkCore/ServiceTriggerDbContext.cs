@@ -6,6 +6,7 @@ using ServiceTrigger.MultiTenancy;
 using ServiceTrigger.Jobs;
 using ServiceTrigger.Projects;
 using ServiceTrigger.Hangfire;
+using ServiceTrigger.JobHistories;
 
 namespace ServiceTrigger.EntityFrameworkCore
 {

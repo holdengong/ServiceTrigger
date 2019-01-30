@@ -1,5 +1,6 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
+using ServiceTrigger.Projects.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,7 +16,7 @@ namespace ServiceTrigger.Jobs.Dtos
         public int ProjectId { get; set; }
         public string ProjectName { get; set; }
         public string ApiUrl { get; set; }
-        
+
         //hangfire hash表字段
         public string Job { get; set; }
         public string Cron { get; set; }
@@ -26,5 +27,6 @@ namespace ServiceTrigger.Jobs.Dtos
         public int LastJobId { get; set; }
         public DateTime NextExecution { get; set; }
 
+        public ProjectListDto Project { get; set; }
     }
 }

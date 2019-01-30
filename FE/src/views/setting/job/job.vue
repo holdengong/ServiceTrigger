@@ -108,7 +108,9 @@
         },
         {
             title:this.L('IsEnable'),
-            key:'isEnable'
+            render:(h:any,params:any)=>{
+                return h('span',params.row.isEnable ? "已启用" : "已禁用")
+            }
         },
         {
             title:this.L('ProjectName'),

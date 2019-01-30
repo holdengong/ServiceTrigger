@@ -1,5 +1,6 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
+using ServiceTrigger.Jobs.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Text;

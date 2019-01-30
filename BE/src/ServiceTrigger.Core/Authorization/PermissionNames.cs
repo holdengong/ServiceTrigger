@@ -29,5 +29,7 @@
         public const string Tools_HangfireDashboard = "Tools.HangfireDashboard";
 
         public const string Tools_Log = "Tools.Log";
+
+        public const string JobsHistory_View = "JobsHistory_View";
     }
 }

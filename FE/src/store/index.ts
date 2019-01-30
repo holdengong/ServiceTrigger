@@ -9,6 +9,7 @@ import role from './modules/role'
 import tenant from './modules/tenant'
 import project from './modules/project'
 import job from './modules/job'
+import jobHistory from './modules/jobHistory'
 const store = new Vuex.Store({
     state: {
         //
@@ -27,7 +28,8 @@ const store = new Vuex.Store({
         role,
         tenant,
         project,
-        job
+        job,
+        jobHistory
     }
 });
 

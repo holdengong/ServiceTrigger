@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ServiceTrigger.EntityFrameworkCore;
 
 namespace ServiceTrigger.Migrations
 {
     [DbContext(typeof(ServiceTriggerDbContext))]
-    partial class ServiceTriggerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190130080437_201901301602_Modify_FK")]
+    partial class _201901301602_Modify_FK
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

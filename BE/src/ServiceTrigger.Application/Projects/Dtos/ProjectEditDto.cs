@@ -22,5 +22,8 @@ namespace ServiceTrigger.Projects.Dtos
         [Required]
         [MaxLength(ServiceTriggerConsts.MaxUrlLength)]
         public string Host { get; set; }
+
+        [MaxLength(ServiceTriggerConsts.MaxNameLength)]
+        public string Enviroment { get; set; }
     }
 }

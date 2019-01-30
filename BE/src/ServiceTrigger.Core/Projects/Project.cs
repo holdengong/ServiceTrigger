@@ -25,5 +25,8 @@ namespace ServiceTrigger.Projects
         public string Host { get; set; }
 
         public List<Job> Jobs { get; set; }
+
+        [MaxLength(ServiceTriggerConsts.MaxNameLength)]
+        public string Enviroment { get; set; }
     }
 }

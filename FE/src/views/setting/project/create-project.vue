@@ -15,6 +15,9 @@
                         <FormItem :label="L('Host')" prop="host">
                             <Input v-model="project.host" :maxlength="32" :minlength="2"></Input>
                         </FormItem>
+                        <FormItem :label="L('Enviroment')" prop="enviroment">
+                            <Input v-model="project.enviroment" :maxlength="32" :minlength="2"></Input>
+                        </FormItem>
                     </TabPane>
                 </Tabs>
             </Form>

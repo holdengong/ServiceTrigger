@@ -99,10 +99,16 @@
         get currentPage(){
             return this.$store.state.project.currentPage;
         }
-        columns=[{
+        columns=[
+        {
             title:this.L('ProjectName'),
             key:'projectName'
-        },{
+        },
+        {
+            title:this.L('Enviroment'),
+            key:'enviroment'
+        },
+        {
             title:this.L('Host'),
             key:'host'
         },

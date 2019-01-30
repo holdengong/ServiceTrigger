@@ -19,5 +19,7 @@ namespace ServiceTrigger.Projects.Dtos
         /// HostUrl地址
         /// </summary>
         public string Host { get; set; }
+
+        public string Enviroment { get; set; }
     }
 }

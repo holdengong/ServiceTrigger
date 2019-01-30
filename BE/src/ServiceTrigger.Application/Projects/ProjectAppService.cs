@@ -33,9 +33,9 @@ namespace ServiceTrigger.Jobs
         [AbpAuthorize(PermissionNames.Projects_Save)]
         public async Task Create(ProjectEditDto input)
         {
-            if (await _projectRepository.CountAsync(e => e.ProjectName == input.ProjectName) > 0)
+            if (await _projectRepository.CountAsync(e => e.ProjectName == input.ProjectName && e.Enviroment == input.Enviroment) > 0)
             {
-                throw new UserFriendlyException("该项目名称已存在");
+                throw new UserFriendlyException("项目名称与环境已存在");
             }
 
             //TODO:新增前的逻辑判断，是否允许新增
@@ -50,6 +50,11 @@ namespace ServiceTrigger.Jobs
         [AbpAuthorize(PermissionNames.Projects_Save)]
         public async Task Update(ProjectEditDto input)
         {
+            if (await _projectRepository.CountAsync(e =>e.Id!=input.Id && e.ProjectName == input.ProjectName && e.Enviroment == input.Enviroment) > 0)
+            {
+                throw new UserFriendlyException("项目名称与环境已存在");
+            }
+
             //TODO:更新前的逻辑判断，是否允许更新
             var entity = await _projectRepository.GetAsync(input.Id.Value);
 

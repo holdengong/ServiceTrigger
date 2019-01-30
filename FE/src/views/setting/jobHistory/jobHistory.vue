@@ -126,6 +126,12 @@
             }
         },
         {
+            title:this.L('Enviroment'),
+            render:(h:any,params:any)=>{
+                return h('span',params.row.job.project.enviroment)
+            }
+        },
+        {
             title:this.L('JobName'),
             render:(h:any,params:any)=>{
                 return h('span',params.row.job.jobName)
@@ -143,12 +149,6 @@
                 return h('span',params.row.result?"成功":"失败")
             }
         },
-/*         {
-            title:this.L('ResultString'),
-            render:(h:any,params:any)=>{
-                return h('span',params.row.result ? "" : params.row.resultString)
-            }
-        }, */
         {
             title:this.L('ErrorMsg'),
             render:(h:any,params:any)=>{

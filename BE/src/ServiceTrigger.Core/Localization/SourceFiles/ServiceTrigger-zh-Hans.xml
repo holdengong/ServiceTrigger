@@ -157,6 +157,8 @@
     <text name="HttpStatusCode">HTTP状态码</text>
 
     <text name="JobHistories">执行记录</text>
+
+    <text name="Enviroment">环境</text>
   </texts>
 </localizationDictionary>
 

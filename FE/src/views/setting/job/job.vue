@@ -117,6 +117,12 @@
             key:'projectName'
         },
         {
+            title:this.L('Enviroment'),
+            render:(h:any,params:any)=>{
+                return h('span',params.row.project.enviroment)
+            }
+        },
+        {
             title:this.L('Frequency'),
             key:'frequency'
         },

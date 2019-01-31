@@ -55,7 +55,24 @@ namespace ServiceTrigger.JobHistories
                 .WhereIf(input.JobId > 0, h => h.JobId == input.JobId)
                 .WhereIf(input.ProjectId > 0, h => h.Job.ProjectId == input.ProjectId);
 
-            //TODO:根据传入的参数添加过滤条件
+            if (!string.IsNullOrWhiteSpace(input.Keywords))
+            {
+                var filters = input.Keywords.Split(' ');
+
+                foreach (var filter in filters)
+                {
+                    if (!string.IsNullOrWhiteSpace(filter))
+                    {
+                        query = query.Where(e => e.Job.Project.ProjectName.Contains(filter) || e.Job.Project.Enviroment.Contains(filter) || e.Job.JobName.Contains(filter));
+                    }
+                }
+            }
+
+            if (input.IsSuccess.HasValue)
+            {
+                query = query.Where(e => e.Result == input.IsSuccess);
+            }
+
             var historyCount = await query.CountAsync();
 
             var histories = await query

@@ -31,6 +31,9 @@
                                 </Radio>
                             </RadioGroup>
                         </FormItem>
+                        <FormItem :label="L('CronFormLabel')" prop="cron">
+                            <Input v-model="job.cron" :maxlength="32" :minlength="2"></Input>
+                        </FormItem>
                          <FormItem :label="L('ApiUrl')" prop="apiUrl">
                             <Input v-model="job.apiUrl" :maxlength="2000" :minlength="2"></Input>
                         </FormItem>

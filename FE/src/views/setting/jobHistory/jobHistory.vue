@@ -4,10 +4,6 @@
         color: rgb(0, 0, 0);
     }
 
-     .ivu-table .demo-table-info-row{
-        height: 100px;
-    }
-
     .ivu-table .demo-table-error-row td{
         background-color: #ffffff;
         color: red;
@@ -18,8 +14,30 @@
     <div>
         <Card dis-hover>
             <div class="page-body">
+                 <Form ref="queryForm" :label-width="90" label-position="left" inline>
+                    <Row :gutter="16">
+                        <Col span="8">
+                            <FormItem :label="L('Keyword')+':'" style="width:100%">
+                                <Input v-model="pagerequest.keywords" :placeholder="L('ProjectName')+'/'+L('Enviroment')+'/'+L('JobName')+'（多个关键词用空格隔开）'"></Input>
+                            </FormItem>
+                        </Col>
+                        <Col span="6">
+                            <FormItem label="执行结果:" style="width:100%">
+                                <!--Select should not set :value="'All'" it may not trigger on-change when first select 'NoActive'(or 'Actived') then select 'All'-->
+                                <Select :placeholder="L('Select')" @on-change="isSuccessChange">
+                                    <Option value="All">全部</Option>
+                                    <Option value="Success">成功</Option>
+                                    <Option value="Fail">失败</Option>
+                                </Select>
+                            </FormItem>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Button icon="ios-search" type="primary" size="large" @click="getpage" class="toolbar-btn">{{L('Find')}}</Button>
+                    </Row>
+                </Form>
                 <div class="margin-top-10">
-                    <Table :height="rowHeight" :row-class-name="rowClassName" :loading="loading" :columns="columns" :no-data-text="L('NoDatas')" border :data="list">
+                    <Table :row-class-name="rowClassName" :loading="loading" :columns="columns" :no-data-text="L('NoDatas')" border :data="list">
                     </Table>
                     <Page  show-sizer class-name="fengpage" :total="totalCount" class="margin-top-10" @on-change="pageChange" @on-page-size-change="pagesizeChange" :page-size="pageSize" :current="currentPage"></Page>
                 </div>
@@ -35,8 +53,8 @@
     import Util from '@/lib/util';
 
     class  PageJobRequest extends PageRequest{
-        keyword:string;
-        isActive:boolean=null;//nullable
+        keywords:string;
+        isSuccess:boolean=null;//nullable
         from:Date;
         to:Date;
     }
@@ -50,6 +68,7 @@
         }
         //filters
         pagerequest:PageJobRequest=new PageJobRequest();
+        
         creationTime:Date[]=[];
 
         createModalShow:boolean=false;
@@ -69,18 +88,14 @@
                 }
         }
 
-        rowHeight(){
-            return 100;
-        }
-
-        isActiveChange(val:string){
+        isSuccessChange(val:string){
             console.log(val);
-            if(val==='Actived'){
-                this.pagerequest.isActive=true;
-            }else if(val==='NoActive'){
-                this.pagerequest.isActive=false;
+            if(val==='Success'){
+                this.pagerequest.isSuccess=true;
+            }else if(val==='Fail'){
+                this.pagerequest.isSuccess=false;
             }else{
-                this.pagerequest.isActive=null;
+                this.pagerequest.isSuccess=null;
             }
         }
         pageChange(page:number){

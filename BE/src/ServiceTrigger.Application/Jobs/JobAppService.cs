@@ -97,7 +97,7 @@ namespace ServiceTrigger.Jobs
 
             if (!string.IsNullOrWhiteSpace(input.Cron))
             {
-                input.Frequency = FrequencyEnum.自定义;
+                entity.Frequency = FrequencyEnum.自定义;
             }
 
             await _jobRepository.UpdateAsync(entity);

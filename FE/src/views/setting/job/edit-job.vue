@@ -15,6 +15,9 @@
                         <FormItem :label="L('ProjectName')" prop="projectName">
                             <Input v-model="job.projectName" :maxlength="32" :minlength="2"></Input>
                         </FormItem>
+                        <FormItem :label="L('Enviroment')" prop="enviroment">
+                            <Input v-model="job.enviroment" :maxlength="32" :minlength="2"></Input>
+                        </FormItem>
                         <FormItem :label="L('Frequency')" prop="frequency">
                              <RadioGroup v-model="job.frequency">
                                 <Radio label="10" key="每分钟">

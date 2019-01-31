@@ -57,8 +57,8 @@ namespace ServiceTrigger.Jobs
 
             var entity = ObjectMapper.Map<Job>(input);
 
-            var project = await _projectRepository.FirstOrDefaultAsync(e=>e.ProjectName==input.ProjectName);
-            entity.Project = project ?? throw new UserFriendlyException("不存在该项目");
+            var project = await _projectRepository.FirstOrDefaultAsync(e => e.ProjectName == input.ProjectName && e.Enviroment == input.Enviroment);
+            entity.Project = project ?? throw new UserFriendlyException("不存在该项目环境");
             entity.Id = await _jobRepository.InsertAndGetIdAsync(entity);
 
             if (!string.IsNullOrWhiteSpace(input.Cron))
@@ -120,7 +120,9 @@ namespace ServiceTrigger.Jobs
         {
             var entity = await _jobRepository.GetAsync(input.Id);
 
-            return ObjectMapper.Map<JobListDto>(entity);
+            var dto = ObjectMapper.Map<JobListDto>(entity);
+
+            return dto;
         }
 
         //[AbpAuthorize(PermissionNames.Jobs_View)]
@@ -185,6 +187,7 @@ namespace ServiceTrigger.Jobs
                 }
 
                 dto.ProjectName = j.Project.ProjectName;
+                dto.Enviroment = j.Project.Enviroment;
                 dtos.Add(dto);
             });
 

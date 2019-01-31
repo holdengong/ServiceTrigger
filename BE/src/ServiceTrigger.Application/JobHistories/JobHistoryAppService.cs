@@ -73,7 +73,7 @@ namespace ServiceTrigger.JobHistories
                 query = query.Where(e => e.Result == input.IsSuccess);
             }
 
-            var historyCount = await query.CountAsync();
+            var historyCount = await query.CountAsync(e => e.Job != null && e.Job.Project != null);
 
             var histories = await query
                 .OrderBy(input.Sorting).AsNoTracking()

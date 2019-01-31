@@ -15,6 +15,7 @@ namespace ServiceTrigger.Jobs.Dtos
         public bool IsEnable { get; set; }
         public int ProjectId { get; set; }
         public string ProjectName { get; set; }
+        public string Enviroment { get; set; }
         public string ApiUrl { get; set; }
 
         //hangfire hash表字段

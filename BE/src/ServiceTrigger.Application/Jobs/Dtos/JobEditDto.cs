@@ -13,6 +13,8 @@ namespace ServiceTrigger.Jobs.Dtos
         [MaxLength(ServiceTriggerConsts.MaxNameLength)]
         public string JobName { get; set; }
 
+        public string Enviroment { get; set; }
+
         [Required]
         public FrequencyEnum Frequency { get; set; }
 

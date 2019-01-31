@@ -41,10 +41,14 @@ namespace ServiceTrigger.Jobs
         public Project Project { get; set; }
 
         public List<JobHistory> JobHistories { get; set; }
+
+        [MaxLength(ServiceTriggerConsts.MaxNameLength)]
+        public string Cron { get; set; }
     }
 
     public enum FrequencyEnum
     {
+        自定义 = 0,
         每分钟 = 10,
         每小时 = 20,
         每天 = 30,

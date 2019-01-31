@@ -11,6 +11,8 @@
     <RootNamespace>ServiceTrigger</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="CronExpressionDescriptor" Version="2.9.0" />
+    <PackageReference Include="Cronos" Version="0.7.0" />
     <PackageReference Include="Hangfire.AspNetCore" Version="1.6.21" />
   </ItemGroup>
   <ItemGroup>

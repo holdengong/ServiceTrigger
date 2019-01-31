@@ -11,5 +11,6 @@ export default class Job extends Entity<number>{
     createdAt:Date;
     lastExecution:Date;
     lastJobId:number;
-    nextExecution:Date
+    nextExecution:Date;
+    cronDescription:string;
 }

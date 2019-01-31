@@ -119,7 +119,7 @@
   
     <text name="FieldIsRequired">必填</text>
   
-    <text name="Cron">Cron表达式</text>
+    <text name="Cron">自定义Cron表达式</text>
     <text name="CreatedAt">创建时间</text>
     <text name="LastExecution">上次执行时间</text>
     <text name="NextExecution">下次执行时间</text>
@@ -159,6 +159,10 @@
     <text name="JobHistories">执行记录</text>
 
     <text name="Enviroment">环境</text>
+
+    <text name="CronFormLabel">自定义Cron表达式(若调度频率和自定义Cron都填写，优先采用自定义Cron表达式)</text>
+
+    <text name="CronDescription">Cron表达式描述</text>
   </texts>
 </localizationDictionary>
 

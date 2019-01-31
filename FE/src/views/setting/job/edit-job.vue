@@ -17,19 +17,22 @@
                         </FormItem>
                         <FormItem :label="L('Frequency')" prop="frequency">
                              <RadioGroup v-model="job.frequency">
-                                <Radio label="10" key="10">
-                                    <span>分钟</span>
+                                <Radio label="10" key="每分钟">
+                                    <span>每分钟</span>
                                 </Radio>
-                                <Radio label="20" key="20">
-                                    <span>小时</span>
+                                <Radio label="20" key="每小时">
+                                    <span>每小时</span>
                                 </Radio>
-                                <Radio label="30" key="30">
-                                    <span>天</span>
+                                <Radio label="30" key="每天">
+                                    <span>每天</span>
                                 </Radio>
-                                <Radio label="40" key="40">
-                                    <span>月</span>
+                                <Radio label="40" key="每月">
+                                    <span>每月</span>
                                 </Radio>
                             </RadioGroup>
+                        </FormItem>
+                        <FormItem :label="L('CronFormLabel')" prop="cron">
+                            <Input v-model="job.cron" :maxlength="32" :minlength="2"></Input>
                         </FormItem>
                          <FormItem :label="L('ApiUrl')" prop="apiUrl">
                             <Input v-model="job.apiUrl" :maxlength="32" :minlength="2"></Input>

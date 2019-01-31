@@ -135,6 +135,10 @@
             key:'cron'
         },
         {
+            title:this.L('CronDescription'),
+            key:'cronDescription'
+        },
+        {
             title:this.L('CreatedAt'),
             render:(h:any,params:any)=>{
                 return h('span',new Date(params.row.createdAt).toLocaleString())

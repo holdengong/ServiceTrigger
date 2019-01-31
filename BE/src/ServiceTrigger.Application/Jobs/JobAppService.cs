@@ -50,12 +50,21 @@ namespace ServiceTrigger.Jobs
         [AbpAuthorize(PermissionNames.Jobs_Save)]
         public async Task Create(JobEditDto input)
         {
-            //TODO:新增前的逻辑判断，是否允许新增
+            if (input.Frequency == FrequencyEnum.自定义 && string.IsNullOrWhiteSpace(input.Cron))
+            {
+                throw new UserFriendlyException("必须选择调度频率或者填写自定义Cron表达式");
+            }
+
             var entity = ObjectMapper.Map<Job>(input);
 
             var project = await _projectRepository.FirstOrDefaultAsync(e=>e.ProjectName==input.ProjectName);
             entity.Project = project ?? throw new UserFriendlyException("不存在该项目");
             entity.Id = await _jobRepository.InsertAndGetIdAsync(entity);
+
+            if (!string.IsNullOrWhiteSpace(input.Cron))
+            {
+                input.Frequency = FrequencyEnum.自定义;
+            }
 
             TestApiConnection(project.Host, entity.ApiUrl);
 
@@ -68,7 +77,11 @@ namespace ServiceTrigger.Jobs
         [AbpAuthorize(PermissionNames.Jobs_Save)]
         public async Task Update(JobEditDto input)
         {
-            //TODO:更新前的逻辑判断，是否允许更新
+            if (input.Frequency == FrequencyEnum.自定义 && string.IsNullOrWhiteSpace(input.Cron))
+            {
+                throw new UserFriendlyException("必须选择调度频率或者填写自定义Cron表达式");
+            }
+
             var entity = await _jobRepository.GetAsync(input.Id.Value);
 
             entity = ObjectMapper.Map(input, entity);
@@ -81,6 +94,11 @@ namespace ServiceTrigger.Jobs
             }
 
             entity.Project = project;
+
+            if (!string.IsNullOrWhiteSpace(input.Cron))
+            {
+                input.Frequency = FrequencyEnum.自定义;
+            }
 
             await _jobRepository.UpdateAsync(entity);
 
@@ -131,7 +149,7 @@ namespace ServiceTrigger.Jobs
                 if (hashs != null)
                 {
                     dto.Job = hashs.SingleOrDefault(e => e.Field == "Job")?.Value;
-                    dto.Cron = hashs.SingleOrDefault(e => e.Field == "Cron")?.Value;
+                    //dto.Cron = hashs.SingleOrDefault(e => e.Field == "Cron")?.Value;
                     dto.TimeZoneId = hashs.SingleOrDefault(e => e.Field == "TimeZoneId")?.Value;
                     dto.Queue = hashs.SingleOrDefault(e => e.Field == "Queue")?.Value;
 
@@ -153,6 +171,16 @@ namespace ServiceTrigger.Jobs
                     if (hashs.SingleOrDefault(e => e.Field == "NextExecution") != null)
                     {
                         dto.NextExecution = DateTime.Parse(hashs.SingleOrDefault(e => e.Field == "NextExecution").Value);
+                    }
+
+                    if (!string.IsNullOrWhiteSpace(j.Cron))
+                    {
+                        CronExpressionDescriptor.Options opt = new CronExpressionDescriptor.Options()
+                        {
+                            DayOfWeekStartIndexZero = false,
+                            ThrowExceptionOnParseError = false
+                        };
+                        dto.CronDescription = CronExpressionDescriptor.ExpressionDescriptor.GetDescription(dto.Cron, opt);
                     }
                 }
 
@@ -253,7 +281,12 @@ namespace ServiceTrigger.Jobs
                     break;
             }
 
-            RecurringJob.AddOrUpdate<SendRequestJob>(entity.Id.ToString(), e => e.Execute(args), cron);
+            if (!string.IsNullOrWhiteSpace(entity.Cron))
+            {
+                cron = entity.Cron;
+            }
+
+            RecurringJob.AddOrUpdate<SendRequestJob>(entity.Id.ToString(), e => e.Execute(args), cron, TimeZoneInfo.Local);
         }
     }
 }

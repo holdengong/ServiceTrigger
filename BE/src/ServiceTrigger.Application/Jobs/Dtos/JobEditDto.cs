@@ -27,5 +27,8 @@ namespace ServiceTrigger.Jobs.Dtos
         [Required]
         [MaxLength(ServiceTriggerConsts.MaxUrlLength)]
         public string ApiUrl { get; set; }
+
+        [MaxLength(ServiceTriggerConsts.MaxNameLength)]
+        public string Cron { get; set; }
     }
 }

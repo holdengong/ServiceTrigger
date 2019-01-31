@@ -20,6 +20,7 @@ namespace ServiceTrigger.Jobs.Dtos
         //hangfire hash表字段
         public string Job { get; set; }
         public string Cron { get; set; }
+        public string CronDescription { get; set; }
         public string TimeZoneId { get; set; }
         public string Queue { get; set; }
         public DateTime CreatedAt { get; set; }

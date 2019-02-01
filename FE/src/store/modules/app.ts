@@ -27,7 +27,7 @@ class AppModule implements Module<AppState, any>{
     namespaced = true;
     state = {
         cachePage: [],
-        lang: '',
+        lang: 'zh-Hans',
         isFullScreen: false,
         openedSubmenuArr: [],
         menuTheme: 'dark',

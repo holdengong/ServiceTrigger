@@ -16,7 +16,7 @@ if(!abp.utils.getCookieValue('Abp.Localization.CultureName')){
   abp.utils.setCookieValue('Abp.Localization.CultureName',language,new Date(new Date().getTime() + 5 * 365 * 86400000),abp.appPath);
 }
 
-Ajax.get('/AbpUserConfiguration/GetAll').then(data=>{
+Ajax.get('/AbpUserConfiguration/GetAll?culture=zh-Hans&ui-culture=zh-Hans').then(data=>{
   Util.abp=Util.extend(true,Util.abp,data.data.result);
   new Vue({
     render: h => h(App),

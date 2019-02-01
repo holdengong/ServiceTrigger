@@ -36,9 +36,10 @@ namespace ServiceTrigger.Jobs
             try
             {
                 hrm = hc.GetAsync(requestUrl).Result;
+
                 jobHistory.Result = hrm.IsSuccessStatusCode;
-                jobHistory.ResultString = hrm.Content.ReadAsStringAsync().Result;
-                jobHistory.ErrorMsg = hrm.IsSuccessStatusCode ? string.Empty : hrm.Content.ReadAsStringAsync().Result;
+                jobHistory.ResultString = string.Empty;
+                jobHistory.ErrorMsg = hrm.IsSuccessStatusCode ? string.Empty : hrm.Content.ReadAsStringAsync().Result.Left(2000);
                 jobHistory.HttpStatusCode = hrm.StatusCode;
             }
             catch (Exception ex)

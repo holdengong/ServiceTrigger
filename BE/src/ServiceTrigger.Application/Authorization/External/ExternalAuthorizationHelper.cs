@@ -1,6 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Abp.Authorization;
+using Abp.Extensions;
+using Abp.Runtime.Session;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
+using ServiceTrigger.Authorization.Users;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -17,36 +22,19 @@ namespace ServiceTrigger.Authorization.External
     {
         private static ConcurrentDictionary<string, DateTime> _dict { get; set; } = new ConcurrentDictionary<string, DateTime>();
 
-        public static bool IsGranted(HttpContext httpContext, string authenticateApiUrl,string permissionName)
+        public static bool IsGranted(HttpContext context, string authenticateApiUrl,string permissionName)
         {
             var isGranted = false;
 
             try
             {
-                var token = httpContext.Request.Cookies["Abp.AuthToken"];
+                var token = context.Request.Cookies["Abp.AuthToken"];
 
                 long userId = GetUserIdFromJwtToken(token);
 
-                string url = authenticateApiUrl + $"?userId={userId}&permissionName={permissionName}";
+                var userManager = context.RequestServices.GetRequiredService<UserManager>();
 
-                if (url.StartsWith("https"))
-                {
-                    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls;
-                }
-
-                HttpClient hc = new HttpClient();
-
-                var postData = new
-                {
-                    userId = userId,
-                    permissionName = permissionName
-                };
-
-                StringContent stringContent = new StringContent(JsonConvert.SerializeObject(postData));
-
-                var result = hc.PostAsync(url, stringContent).Result.Content.ReadAsStringAsync().Result;
-
-                isGranted = result.Equals(true.ToString(), StringComparison.CurrentCultureIgnoreCase);
+                isGranted = userManager.IsGrantedAsync(userId, permissionName).Result;
             }
             catch (Exception ex)
             {
@@ -55,7 +43,7 @@ namespace ServiceTrigger.Authorization.External
             return isGranted;
         }
 
-        public static long GetUserIdFromJwtToken(string token)
+        private static long GetUserIdFromJwtToken(string token)
         {
             var handler = new JwtSecurityTokenHandler();
 
@@ -68,24 +56,6 @@ namespace ServiceTrigger.Authorization.External
             var userId = long.Parse(sub);
 
             return userId;
-        }
-
-        public static bool GetFromCache(string userIdAndPermissionName)
-        {
-            bool isGranted = false;
-            if (_dict.ContainsKey(userIdAndPermissionName))
-            {
-                if (DateTime.Now - _dict[userIdAndPermissionName] > TimeSpan.FromMinutes(1))
-                {
-                    _dict.TryRemove(userIdAndPermissionName, out DateTime dt);
-                }
-                else
-                {
-                    isGranted = true;
-                }
-            }
-
-            return isGranted;
         }
     }
 }
